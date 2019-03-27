@@ -38,7 +38,7 @@ class MinStack(object):
         """
         if self.first is not None:
             # Update the minimum
-            self.min = self.prevMin
+            self.min = self.min.prevMin
             # Update pointers
             self.last = self.last.prev
             self.last.next = None
