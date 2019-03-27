@@ -69,4 +69,22 @@ class Node:
         self.prev = None
         self.next = None
         self.prevMin = None
+
+
+def tests(): 
+    s = MinStack()
+    s.push(1)
+    s.push(-1)
+    s.push(0)
+    print(s.first.val == 1)
+    print(s.last.val == 0)
         
+    s.pop()
+    print(s.top() == -1)
+    print(s.getMin() == -1)
+    s.pop()
+    print(s.getMin() == 1)
+    s.pop()
+    s.top()
+
+tests()
