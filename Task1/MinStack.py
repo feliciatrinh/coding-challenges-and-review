@@ -15,17 +15,19 @@ class MinStack(object):
         :type x: int
         :rtype: None
         """
+        newNode = Node(x)
         # Empty stack
         if self.first is None: 
-            self.first = Node(x)
-            self.last = Node(x)
+            self.first = newNode
+            self.last = newNode
             self.min = self.first
         else: 
-            newNode = Node(x)
             # Update the minimum
             if x < self.min.val: 
                 newNode.prevMin = self.min
                 self.min = newNode
+            else: 
+                newNode.prevMin = self.min
             # Update prev and next pointers
             newNode.prev = self.last
             self.last.next = newNode
