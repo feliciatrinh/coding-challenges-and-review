@@ -2,7 +2,6 @@ class MinStack(object):
 
     def __init__(self):
         """
-        initialize your data structure here.
         A double linked list
         """
         self.first = None
@@ -63,7 +62,7 @@ class MinStack(object):
 class Node: 
     def __init__(self, val=None): 
         """
-        A node in a single-linked list
+        A node in a double-linked list
         """
         self.val = val
         self.prev = None
