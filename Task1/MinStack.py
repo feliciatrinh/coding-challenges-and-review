@@ -40,7 +40,7 @@ class MinStack(object):
         """
         if self.first is not None:
             # Update the minimum
-            self.min = self.min.prevMin
+            self.min = self.last.prevMin
             # Update pointers
             self.last = self.last.prev
             self.last.next = None
@@ -56,7 +56,8 @@ class MinStack(object):
         """
         :rtype: int
         """
-        return self.min.val
+        if self is not None: 
+            return self.min.val
 
         
 class Node: 
