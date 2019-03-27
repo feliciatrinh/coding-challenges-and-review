@@ -3,8 +3,11 @@ class MinStack(object):
     def __init__(self):
         """
         initialize your data structure here.
+        A double linked list
         """
-        return list()
+        self.first = None
+        self.last = None
+        self.min = None
         
 
     def push(self, x):
@@ -12,35 +15,55 @@ class MinStack(object):
         :type x: int
         :rtype: None
         """
-        self.append(x)
-        
+        # Empty stack
+        if self.first is None: 
+            self.first = Node(x)
+            self.last = Node(x)
+            self.min = self.first
+        else: 
+            newNode = Node(x)
+            # Update the minimum
+            if x < self.min.val: 
+                newNode.prevMin = self.min
+                self.min = newNode
+            # Update prev and next pointers
+            newNode.prev = self.last
+            self.last.next = newNode
+            self.last = newNode
+            
 
     def pop(self):
         """
         :rtype: None
         """
-        top = self.pop()
-        if (top == self.min) 
-            self.min = self[len(self)-1]
-        self.pop()
-        
+        if self.first is not None:
+            # Update the minimum
+            self.min = self.prevMin
+            # Update pointers
+            self.last = self.last.prev
+            self.last.next = None
+
 
     def top(self):
         """
         :rtype: int
         """
-        return self[len(self)-1]
+        return self.last.val
 
     def getMin(self):
         """
         :rtype: int
         """
+        return self.min.val
+
         
-
-
-# Your MinStack object will be instantiated and called as such:
-# obj = MinStack()
-# obj.push(x)
-# obj.pop()
-# param_3 = obj.top()
-# param_4 = obj.getMin()
+class Node: 
+    def __init__(self, val=None): 
+        """
+        A node in a single-linked list
+        """
+        self.val = val
+        self.prev = None
+        self.next = None
+        self.prevMin = None
+        
