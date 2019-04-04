@@ -1,6 +1,6 @@
 # Reverse a singly linked list
 class Linkedlst(): 
-    def __init__(self, first): 
+    def __init__(self, first=None): 
         self.first = first
 
 class Node(): 
@@ -9,6 +9,8 @@ class Node():
         self.next = next
 
 def reverseLinkedlst(lst): 
+    if lst.first is None: 
+        return 
     front = lst.first
     holder = front
     curr = front.next
