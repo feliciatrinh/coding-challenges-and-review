@@ -1,3 +1,3 @@
 # Arrays and Strings  
 
-Example problems from "Cracking the Coding Interview" sixth edition
+Example problems from "Cracking the Coding Interview" sixth edition and Hackerrank
