@@ -1,3 +1,4 @@
+# Sort a stack s.t. the smallest items are on the top. Can use an additional temporary stack. 
 def sortStack(stack): 
     if stack.isEmpty(): 
         return
