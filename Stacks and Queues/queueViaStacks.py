@@ -35,7 +35,7 @@ class Stack():
     def pop(self): 
         if not self.isEmpty(): 
             self.length -= 1
-            return self.array[self.length]
+            return self.array.pop()
     
     def peek(self): 
         return self.array[self.length - 1]
