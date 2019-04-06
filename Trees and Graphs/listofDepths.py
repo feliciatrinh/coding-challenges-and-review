@@ -61,6 +61,16 @@ class TreeNode():
         self.right = right
 
 # tests for visualization purposes
+tree = TreeNode(1)
+lst = listofDepths(tree)
+for level in lst: 
+    printLinkedlst(level)
+    
+tree = TreeNode(1, TreeNode(2)) 
+lst = listofDepths(tree)
+for level in lst: 
+    printLinkedlst(level)    
+
 tree = TreeNode(1, TreeNode(2), TreeNode(2))
 lst = listofDepths(tree)
 for level in lst: 
