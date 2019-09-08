@@ -2,6 +2,28 @@ def kth_node(head, k):
     """
     Given the head of a linked list, return the kth to last node of the linked list
     runtime O(n)
+    """
+    ref = head
+    main = head
+    count = 0
+    while count < k: 
+        if ref is None: # case when k > number of nodes in linked list
+            return 
+        ref = ref.next
+        count += 1
+    # ref and main are now k nodes apart
+    # when ref is None, main will point to the kth to last node 
+    while ref is not None: 
+        ref = ref.next
+        main = main.next
+    main.next = None # get rid of the rest of the linked list
+    return main
+
+
+def kth_node_rev(head, k):
+    """
+    Given the head of a linked list, return the kth to last node of the linked list
+    runtime O(n)
 
     Reverse the linked list first, then return the (kth - 1) node
 
