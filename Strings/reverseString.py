@@ -9,6 +9,6 @@ def reverseString2(s):
     """
     recursive solution
     """
-    if len(s) == 1:
+    if len(s) <= 1:
         return s
     return reverseString2(s[1:]) + s[0]
