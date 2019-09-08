@@ -8,12 +8,12 @@ class Node():
         self.val = val
         self.next = next_node
 
-def reverseLinkedlst(lst):
+def reverseLinkedlst(head):
     """
     Iterative approach. runtime linear O(n)
     """
     prev = None
-    curr = lst.head
+    curr = head
     while curr is not None: 
         next_node = curr.next
         curr.next = prev
@@ -21,7 +21,7 @@ def reverseLinkedlst(lst):
         curr = next_node
     return prev
 
-#lst = Linkedlst(Node("a", Node("b", Node("c", Node("d")))))9
+#lst = Linkedlst(Node("a", Node("b", Node("c", Node("d")))))
 
 def reverseLinkedListRecursive(head):
     """
