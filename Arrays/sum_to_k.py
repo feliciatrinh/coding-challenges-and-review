@@ -22,7 +22,7 @@ def sum_to_k(arr, k):
                 count += freq[k - elem]
     # divide count by 2 because we double-counted when iterating through the list 
     # is there a way to avoid double counting? 
-    return count // 2   
+    return count / 2   
 
 # arr = [10, 12, 10, 15, -1, 7, 6, 5, 4, 2, 1, 1, 1]
 # arr2 = [1, 1, 1, 1, -1, 3]
