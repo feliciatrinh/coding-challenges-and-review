@@ -1,6 +1,10 @@
-# returns the maximum difference between elements nums[j] and nums[i]
-# where j > i
-# returns -1 if there is no such difference
+"""
+returns the maximum difference between elements nums[j] and nums[i]
+where j > i
+returns -1 if there is no such difference
+runtime O(n)?
+"""
+
 def maxDifference(nums):
     # if array is sorted from greatest to least, return -1
     # naive solution is to compare between every element
