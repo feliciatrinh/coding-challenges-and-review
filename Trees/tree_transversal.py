@@ -10,7 +10,7 @@
     - produces sorted output
     - can produce in-order by sorting any of the other traversals
 
-- Can reconstruct the B tree given pre-order, post-order, or level-order
+- Can reconstruct the binary tree given pre-order, post-order, or level-order
 """
 
 class Node():
@@ -23,7 +23,7 @@ class Node():
 def list_levelorder_traversal(root):
     """
     Iterative
-    Returns level-order traversal of B tree as a list.
+    Returns level-order traversal of binary tree as a list.
 
         3
        / \
@@ -62,7 +62,7 @@ def list_levelorder_traversal(root):
 def list_levelorder(root):
     """
     Iterative
-    Returns level-order traversal of B tree as a list of lists
+    Returns level-order traversal of binary tree as a list of lists
 
         3
        / \
@@ -134,7 +134,7 @@ def print_preorder_traversal(root):
 def list_preorder_traversal(root):
     """
     Recursive solution
-    Returns pre-order traversal of B tree as a list.
+    Returns pre-order traversal of binary tree as a list.
     """
     preorder = []
     if root:
@@ -160,7 +160,7 @@ def print_inorder_traversal(root):
 def list_inorder_traversal(root):
     """
     Recursive solution
-    Returns in-order traversal of B tree as a list.
+    Returns in-order traversal of binary tree as a list.
     """
     inorder = []
     if root:
@@ -186,7 +186,7 @@ def print_postorder(root):
 def list_postorder_traversal(root):
     """
     Recursive solution
-    Returns post-order traversal of B tree as a list.
+    Returns post-order traversal of binary tree as a list.
     """
     postorder = []
     if root:
