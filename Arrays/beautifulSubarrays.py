@@ -16,7 +16,7 @@
         subarrays_so_far[odd_elems] += 1 
         if num % 2 != 0: # add to odd counter to move along the subarrays_so_far array
             odd_elems += 1
-        if odd_elems >= m: # if you don't have enough odd nums
+        if odd_elems >= m: # if you have enough odd nums
         # you don't increment the count
             num_subarrays += subarrays_so_far[odd_elems - m]
             # if you have too many odd numbers, then you ignore the front portion of the array
