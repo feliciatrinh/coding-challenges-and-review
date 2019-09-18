@@ -73,13 +73,46 @@ def delete(root, value):
     if root is None: 
         return root
     if value < root.value:
-        return delete(root.left, value)
+        root.left = delete(root.left, value)
     elif value > root.value: 
-        return delete(root.right, value)
+        root.right = delete(root.right, value)
     else: 
-        # node to delete has no children
-        if root.left is None and root.right is None:
-            if root.value == value:
+        # delete the root
+        if root.value == value:
+            if root.left is None:
+                return root.right
+            elif root.right is None: 
+                return root.left
+            elif root.left is None and root.right is None:
                 return None
-            return root
+            else: 
+                # find the smallest key in the right subtree
+                # remove this smallest key from the subtree
+                # set the root's value to this smallest key
+                smallest = minVal(root.right)
+                root.right = delete(root.right, smallest)
+                root.value = smallest
+    return root
+
+
+def minVal(root):
+    """
+    Returns the smallest value in the given BST. 
+    """
+
+
+def isBST(root, left=None, right=None):
+    """
+    Returns true if given binary tree is a BST and returns false otherwise.
+    Assumes no duplicate keys. 
+    Runtime O(n)
+    """
+    if root is None: 
+        return True
+    # left node's value is >= root's value, not a BST
+    if left is not None and left.value >= root.value:
+        return False
+    if right is not None and right.value <= root.value: 
+        return False
+    return isBST(root.left, left, root) and isBST(root.right, root, right)
         
