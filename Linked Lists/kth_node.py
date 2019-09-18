@@ -1,6 +1,7 @@
 def kth_node(head, k):
     """
     Given the head of a linked list, return the kth to last node of the linked list
+    using two pointer method. 
     runtime O(n)
     """
     ref = head
