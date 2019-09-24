@@ -37,19 +37,23 @@ def search(root, value):
 def insert(root, value):
     """
     Insert a new node with value as its key 
+    TODO: check if this is right
     """
     if root is None: 
         root = Node(value)
     elif value < root.value:
-        if root.left is None: 
-            root.left = Node(value)
-        else: 
-            insert(root.left, value)
+        # if root.left is None: # don't need this null check
+        #     root.left = Node(value)
+        # else: 
+        #     insert(root.left, value)
+        root.left = insert(root.left, value)
     elif value > root.value: 
-        if root.right is None: 
-            root.right = Node(value)
-        else: 
-            insert(root.right, value)
+        # if root.right is None: # don't need this null check
+        #     root.right = Node(value)
+        # else: 
+        #     insert(root.right, value)
+        root.right = insert(root.right, value)
+    return root
 
 
 def delete(root, value):
