@@ -9,6 +9,10 @@ reachable vertex, visiting each vertex at most once.
 
 - DFS preorder is order of dfs calls
 - DFS postorder is order of dfs returns
+
+Other uses for DFS: 
+- Finding strongly connected components.
+- 
 """
 
 def depth_first_paths():

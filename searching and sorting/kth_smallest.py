@@ -1,4 +1,4 @@
-1def kth_smallest(arr1, arr2, k):
+def kth_smallest(arr1, arr2, k):
     """
     Given two sorted array, each of size n, give the kth smallest element
     in the union of the two arrays in log(k) time. 
