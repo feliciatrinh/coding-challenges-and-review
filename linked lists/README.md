@@ -1,5 +1,8 @@
 # Linked Lists
 
+* [Binary](binary.py)
+	* Given a linked list representation of a binary number, return the decimal representation.
+	* Runtime: O(n)
 * [Delete Middle Node](deleteMiddleNode.py)
 	* Given a node, delete this node from the middle of its linked list. Assumes there is a non-null node after the input node.
 * [Kth Node](kth_node.py)
