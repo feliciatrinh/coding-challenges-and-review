@@ -1,8 +1,8 @@
 # Arrays
 
 * [Array Manipulation](arrayManipulation.py)
-    * Starting with a 1-indexed array of zeros and a list of operations, for each operation add a value to each of the array elements between two given indices, inclusive. Once all operations have been performed, return the max value in your array.
-    * Runtime: O(m+n) where m is the number of operations and n is the number of elements in the array.
+    * Starting with a 1-indexed array of zeros and a 2D array of operations, for each operation add a value to each of the array elements between two given indices, inclusive. Once all operations have been performed, return the max value in your array.
+    * Runtime: O(m) where m is the number of operations.
 * [Beautiful Subarrays](beautifulSubarrays.py)
     * Return the number of subarrays containing m odd numbers.
     * Runtime: O(n) where n is the number of elements in the input array.
