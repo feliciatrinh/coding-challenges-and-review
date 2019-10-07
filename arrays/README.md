@@ -9,6 +9,10 @@
 * [Bone Trousle](bonetrousle.py)
     * Given the values of n, k, and b for trips to the store, determine which boxes Papyrus must purchase during each trip. He purchases exactly b boxes, has k boxes availble at the store where each box contains k sticks, wants n sticks total. Outputs one possible solution.
     * Runtime: O(b)?
+* [Consecutive Sum](consecutive_sum.py)
+	* Given an int, find the number of ways to represent it as a sum of 2 or more consecutive integers.
+	* Solution uses the arithmatic sum formula.
+	* Runtime: linear with respect to the input integer?
 * [Counting Valleys](countingValleys.py)
 	* From HackerRank
 * [Fibonacci](fibonacci.py)
