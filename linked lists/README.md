@@ -3,6 +3,9 @@
 * [Binary](binary.py)
 	* Given a linked list representation of a binary number, return the decimal representation.
 	* Runtime: O(n)
+* [Delete Greater](deleteGreater.py)
+	* Given the head of a linked list and an integer x, delete all nodes from the linked list with values greater than x.
+	* Runtime: O(n)
 * [Delete Middle Node](deleteMiddleNode.py)
 	* Given a node, delete this node from the middle of its linked list. Assumes there is a non-null node after the input node.
 * [Kth Node](kth_node.py)
