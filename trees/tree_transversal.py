@@ -120,6 +120,7 @@ def print_level_order(root):
                 print(values[i])
         curr_level = next_level
 
+
 def print_preorder_traversal(root):
     """
     Recursive solution
