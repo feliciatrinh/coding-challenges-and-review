@@ -1,4 +1,4 @@
-// Returns true is a string consisting of '{', '}', '[', ']' is balanced. "{[{}]}" is balanced. 
+// Returns true if a string consisting of '{', '}', '[', ']' is balanced. "{[{}]}" is balanced. 
 public statis boolean balanced(String str) {
   Stack<Character> stack = new Stack<Character>(); 
   for (int i = 0; i < str.length(); i++) {
