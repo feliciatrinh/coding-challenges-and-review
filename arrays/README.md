@@ -15,6 +15,9 @@
 	* Runtime: linear with respect to the input integer?
 * [Counting Valleys](countingValleys.py)
 	* From HackerRank
+* [Cut Bamboo](cut_bamboo.py)
+	* Given an array of integer lengths, return an array of integers where each represents the number of pieces at the start of each turn.
+	* Runtime: worstcase O(n^2) when the lengths differ by 1 (e.g. [1, 2, 3, 4, 5...]) 
 * [Fibonacci](fibonacci.py)
 	* Return the nth fibonacci number using an iterative, recursive, tail recursive solutions.
 	* Worst runtime O(2^n), best runtime you usually see O(n)
