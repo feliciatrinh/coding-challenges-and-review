@@ -42,16 +42,8 @@ def insert(root, value):
     if root is None: 
         root = Node(value)
     elif value < root.value:
-        # if root.left is None: # don't need this null check
-        #     root.left = Node(value)
-        # else: 
-        #     insert(root.left, value)
         root.left = insert(root.left, value)
     elif value > root.value: 
-        # if root.right is None: # don't need this null check
-        #     root.right = Node(value)
-        # else: 
-        #     insert(root.right, value)
         root.right = insert(root.right, value)
     return root
 
@@ -101,8 +93,12 @@ def delete(root, value):
 
 def minVal(root):
     """
-    Returns the smallest value in the given BST. 
+    Returns the smallest value in the given BST.
+    Traverse through the left subtree. Average runtime is O(n/2)?
     """
+    if root.left:
+        return minVal(root.left)
+    return root.value
 
 
 def isBST(root, left=None, right=None):
@@ -119,4 +115,11 @@ def isBST(root, left=None, right=None):
     if right is not None and right.value <= root.value: 
         return False
     return isBST(root.left, left, root) and isBST(root.right, root, right)
+
+tree = Node(5, Node(3, Node(2), Node(4)), Node(7, Node(6), Node(8)))
+"""
+        5
+    3       7
+  2   4   6   8
+"""
         
