@@ -11,7 +11,7 @@ Search: avg O(logn), worst O(n)
 Insert: avg O(logn), worst O(n)
 Delete: avg O(logn), worst O(n)
 
-worst case occurs when you have a spindly tree
+Worst case occurs when you have a spindly tree.
 """
 
 class Node():
@@ -19,6 +19,7 @@ class Node():
         self.value = value
         self.left = left
         self.right = right
+
 
 def search(root, value): 
     """
@@ -94,7 +95,7 @@ def delete(root, value):
 def minVal(root):
     """
     Returns the smallest value in the given BST.
-    Traverse through the left subtree. Average runtime is O(n/2)?
+    Traverse through the left subtree. Average runtime is O(log(n))
     """
     if root.left:
         return minVal(root.left)
@@ -116,10 +117,16 @@ def isBST(root, left=None, right=None):
         return False
     return isBST(root.left, left, root) and isBST(root.right, root, right)
 
+
 tree = Node(5, Node(3, Node(2), Node(4)), Node(7, Node(6), Node(8)))
 """
         5
     3       7
   2   4   6   8
+
+delete(tree, 5) results in 
+        6
+    3       7
+  2  4        8  
 """
         
