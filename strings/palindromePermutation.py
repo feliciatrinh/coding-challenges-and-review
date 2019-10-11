@@ -5,7 +5,7 @@ def pali(str):
     if len(str) == 1: 
         return True
     str = str.lower()
-    str = re.sub("\s", "", str)
+    str = re.sub(r"\s", "", str)
     letters = Counter()
     for char in str: 
         letters[char] += 1

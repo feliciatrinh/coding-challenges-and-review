@@ -1,6 +1,6 @@
 def reverseString(s):
     """
-    Given a string s, return the verse of the string.
+    Given a string s, return the reverse of the string.
     O(n) runtime? 
     """
     return s[::-1]
