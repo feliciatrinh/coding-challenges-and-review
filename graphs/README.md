@@ -10,9 +10,6 @@
 	* Uses adjacency list implementation for graph G.
 	* Uses a stack.
 	* Runtime O(V + E), Space O(V)
-* [Longest Increasing Subsequence LIS](longest_increasing_subsequence.py)
-	* Given an array of integers, return the longest increasing subsequence.
-	* Dynamic programming: turns the problem into a DAG. Runtime O(n^2)
 * [Matrix Paths](matrix_paths.py)
 	* Print all possible paths from the top left to the bottom right of an m x n matrix.
 	* Runtime: exponential?
