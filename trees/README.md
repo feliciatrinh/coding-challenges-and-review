@@ -16,4 +16,6 @@
 	* In-order
 	* Post-order
 	* Level-order
-	
+* [Valid Binary Tree](validBinaryTree.java) {
+	* Given a binary tree as a sequence of parent-child pairs, output the highest priority error if an error is present.
+	* Used hashmap and hashsets for O(1) time adds and accesses
