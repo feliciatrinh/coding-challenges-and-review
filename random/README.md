@@ -5,6 +5,10 @@
 	* Solution counts the number of allowable open parentheses and the minimum number of open parentheses possible
 	* YES if allowable >= 0 and minimum == 0
 	* Runtime O(n)
+* [Climb Stairs](climb_stairs.py)
+	* Print the number of ways to climb stairs with n steps when you can either climb 1 or 2 steps at a time.
+	* Runtime O(n)
+	* Solution is the nth + 1 Fibonacci number
 * [Days Between](DaysBetween.c)
 	* Return the number of days between two dates.
 	* Uses their built in function DaysInMonth()
