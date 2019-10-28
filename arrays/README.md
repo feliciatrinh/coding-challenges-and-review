@@ -29,6 +29,9 @@
 * [Sum to K](sum_to_k.py)
 	* Given an array of integers (not necessarily distinct), return the number of pairs that sum to k.
 	* Average runtime O(n)
+* [Two Sum](two_sum.py)
+	* Given an array of integers and a target, return the indices of the two numbers that sum to the target.
+	* Average runtime O(n) with Hash table approach
 
 ## Less Relevant Problems
 * [Bone Trousle](bonetrousle.py)
