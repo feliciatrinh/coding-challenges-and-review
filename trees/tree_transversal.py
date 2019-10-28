@@ -59,6 +59,46 @@ def list_levelorder_traversal(root):
     return lst
 
 
+def list_zigzag_levelorder(root):
+    """
+    Iterative
+    Returns zig zag level order traversal of binary tree as a list of lists.
+        3
+       / \
+      9  20
+        /  \
+       15   7 
+
+    returns [[3], [20, 9], [15, 7]] 
+    """
+    lst = []
+    curr_level = []
+    if root:
+        curr_level.append(root)
+        flag = True
+    while curr_level:
+        values = []
+        next_level = []
+        for node in curr_level:
+            values.append(node.value)
+            if flag: # right to left
+                # you start with the left most node, so add to the list in reverse from the left
+                if node.left:
+                    next_level.insert(0, node.left)
+                if node.right:
+                    next_level.insert(0, node.right)
+            else: # left to right
+                # you start with the right most node, so add to the list in reverse from the right
+                if node.right:
+                    next_level.insert(0, node.right)
+                if node.left:
+                    next_level.insert(0, node.left)
+        lst.append(values)
+        curr_level = next_level
+        flag = not flag
+    return lst
+
+
 def list_levelorder(root):
     """
     Iterative
