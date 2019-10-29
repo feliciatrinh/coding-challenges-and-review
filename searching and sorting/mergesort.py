@@ -1,5 +1,5 @@
 """
-Margesort
+Mergesort
 Recursively split list in half, sort each half, merge together
 Stable sorting
 Runtime O(nlogn)
