@@ -29,7 +29,7 @@
 * [Sum to K](sum_to_k.py)
 	* Given an array of integers (not necessarily distinct), return the number of pairs that sum to k.
 	* Average runtime O(n)
-* [Triple Product](triple_product)
+* [Triple Product](tripleProduct.java)
 	* Given an array of positive and negative numbers, return the maximum possible product of 3 numbers.
 	* Runtime O(n)
 * [Two Sum](two_sum.py)
