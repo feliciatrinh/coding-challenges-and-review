@@ -29,6 +29,9 @@
 * [Sum to K](sum_to_k.py)
 	* Given an array of integers (not necessarily distinct), return the number of pairs that sum to k.
 	* Average runtime O(n)
+* [Triple Product](triple_product)
+	* Given an array of positive and negative numbers, return the maximum possible product of 3 numbers.
+	* Runtime O(n)
 * [Two Sum](two_sum.py)
 	* Given an array of integers and a target, return the indices of the two numbers that sum to the target.
 	* Average runtime O(n) with Hash table approach
