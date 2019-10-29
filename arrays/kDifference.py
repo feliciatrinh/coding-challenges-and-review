@@ -47,6 +47,8 @@ def bestPairs(k, arr):
     checking for existence in the set takes average O(1) and worst case O(n) time
     Worst case scenario would take O(n^2) time
     """
+    if k == 0:
+        return 0
     count = 0
     arr_set = set()
     for elem in arr:
