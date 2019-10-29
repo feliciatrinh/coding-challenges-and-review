@@ -138,7 +138,6 @@ def print_level_order(root):
         9 20
 
         15 7
-    TODO: figure out a way to do so i
     """
     curr_level = []
     if root: 

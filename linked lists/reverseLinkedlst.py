@@ -29,7 +29,7 @@ def reverseLinkedListRecursive(head):
     """
     if head is None or head.next is None: 
         return head
-    new_head = reverseLinkedlst(head.next)
+    new_head = reverseLinkedListRecursive(head.next)
     # make the next node point to the current node
     head.next.next = head
     # the current head becomes the last node

@@ -30,7 +30,7 @@ public class Solution {
 			int allowableOpenCount = 0; // count prioritizes emoticons
 			int leastOpenCount = 0; // count prioritizes traditional balanced parentheses
 			for (int i = 0; i < line.length(); i++) {
-				allowableOpenCount += 1;
+				allowableOpenCount += 1; // can also move into the for loop below
 				if (((Character) line.charAt(i)).equals('(')) {
 					if (i == 0 || !(((Character) line.charAt(i - 1)).equals(':'))) {
 						leastOpenCount += 1; // doesn't count ':('

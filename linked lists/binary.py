@@ -11,7 +11,6 @@ Runtime: O(n)
 """
 
 
-
 def binary(head):
 	count = 0
 	decimal = 0

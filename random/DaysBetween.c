@@ -25,9 +25,7 @@ int DaysBetween(int year1, int month1, int day1, int year2, int month2, int day2
         }
     }
     // Take into account overcounting.
-    if (day1 > 1) {
-        totalDays -= (day1 - 1);
-    }
+    totalDays -= (day1 - 1);
     // account for the days in between the 1st and day2
     totalDays += (day2 - 1); 
     return totalDays;

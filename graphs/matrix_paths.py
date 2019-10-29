@@ -28,7 +28,7 @@ def matrix_paths(matrix):
 	return matrix_paths_helper(matrix, 0, 0, [0]*(len(matrix) + len(matrix[0]) - 1), 0)
 	
 
-def matrix_paths_helper(matrix, row, col, path, index, all_paths):
+def matrix_paths_helper(matrix, row, col, path, index):
 	"""
 	We need an index because we want to re-write the path array during each of the possible paths.
 	Appending the element to the path doesn't work because you have no way of starting a new path
