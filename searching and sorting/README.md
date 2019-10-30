@@ -4,6 +4,10 @@
 	* Return the number of occurrences of an integer in a sorted array in O(logn) time.
 	* Use binary search to find the first and last occurrence of n to take advantage of sortedness.
 	* TODO: Fix your solution.
+* [K Sort](k_sort.py)
+	* Return k sorted lists as a single sorted list
+	* Runtime: O(n * logk)
+	* Divide and conquer algorithm: sort each pair of k sorted lists using merge from mergesort recursively until only one list remains
 * [Kth Smallest](kth_smallest.py)
 	* Given two sorted arrays of integers, each of size n, give the kth smallest element in the union of the two arrays.
 	* Runtime O(logk)
