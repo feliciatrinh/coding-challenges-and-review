@@ -24,6 +24,9 @@
 	* Given array of distinct integers, count the number of pairs of integers with difference k.
 	* Runtime is O(n) on average.
 * [No Duplicates](no_duplicates.py)
+* [Rectangles](rectangles.py)
+	* Given a 2D array filled with 1s and 0s, find the starting and end point of all rectangles filled with 0.
+	* Runtime O()
 * [Rotate Left](rotLeft.py)
 	* Shift each element d units to the left.
 * [Sum to K](sum_to_k.py)
