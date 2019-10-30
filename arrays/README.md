@@ -29,6 +29,9 @@
 	* Runtime O()
 * [Rotate Left](rotLeft.py)
 	* Shift each element d units to the left.
+* [Spiral](spiral.py)
+	* Given a 2D matrix, return the spiral pattern as a flat array.
+	* Runtime O(nm)
 * [Sum to K](sum_to_k.py)
 	* Given an array of integers (not necessarily distinct), return the number of pairs that sum to k.
 	* Average runtime O(n)
