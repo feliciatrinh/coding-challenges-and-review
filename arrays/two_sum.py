@@ -16,5 +16,5 @@ def two_sum(nums, target):
 	for i in range(len(nums)):
 		complement = target - nums[i]
 		if complement in ints:
-			return [ints[complement], i]
-		ints[nums[i]] = i
+			return [ints[complement], i] # return ints[complement] + [i]
+		ints[nums[i]] = i # ints[nums[i]] = [i] is slightly faster but takes up more memory

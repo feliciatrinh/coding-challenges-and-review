@@ -1,5 +1,7 @@
 # Graphs
 
+* [A\*](a_star.py)
+	* 
 * [Breadth First Search](breadth_first_paths.py)
 	* Use breadth first search graph traversal algorithm to print the breadth first path.
 	* Uses adjacency list implementation for graph G.
@@ -10,6 +12,8 @@
 	* Uses adjacency list implementation for graph G.
 	* Uses a stack.
 	* Runtime O(V + E), Space O(V)
+* [Dijkstra's Algorithm](dijkstra.py)
+	*
 * [Matrix Paths](matrix_paths.py)
 	* Print all possible paths from the top left to the bottom right of an m x n matrix.
 	* Runtime: exponential?
