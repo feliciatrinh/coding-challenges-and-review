@@ -1,8 +1,13 @@
 """
 Mergesort
-Recursively split list in half, sort each half, merge together
-Stable sorting
+Input: an unsorted list
+Output: a sorted list
+
 Runtime O(nlogn)
+
+Idea:
+  - Recursively split list in half, sort each half, merge together
+  - Stable sorting
 """
 def mergesort(lst):
     if len(lst) <= 1: 
@@ -11,9 +16,9 @@ def mergesort(lst):
     return merge(mergesort(lst[:middle]), mergesort(lst[middle:]))
     
 def merge(lst1, lst2):
-    if len(lst1) == 0:
+    if not lst1:
         return lst2
-    elif len(lst2) == 0:
+    elif not lst2:
         return lst1
     elif lst1[0] <= lst2[0]:  # use <= for stable sorting
         return [lst1[0]] + merge(lst1[1:], lst2)
