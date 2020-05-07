@@ -12,6 +12,9 @@
 * [Days Between](DaysBetween.c)
 	* Return the number of days between two dates.
 	* Uses their built in function DaysInMonth()
+* [Reverse Integer](reverseInteger.py)
+	* Given a 32-bit signed integer, return the reverse
+	* Runtime: O(n) in number of digits?
 * [Sum Without 5 and 7](sum_five_seven.py)
 	* Return the sum of numbers between 1 and n, not including numbers divisible by 5 or 7.
 	* Runtime O(n)
