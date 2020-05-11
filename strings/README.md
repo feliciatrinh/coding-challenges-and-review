@@ -2,25 +2,27 @@
 
 * [Palindrome](isPalindrome.py)
     * Returns True if input string s is a palindrome, False otherwise
-    * Runtime: $O(n)$
+    * Runtime: O(n)
 * [Permutations](permutations.py)
     * Given string s with distinct characters, return list of all possible permutations of s.
-    * Runtime: $O(n * n!)$
+    * Runtime: O(n * n!)
 * [String to Integer](stringToInteger.py)
     * Given string s, return it as an integer if conversion is possible
     * TODO: review regex
 * [Substrings](substrings.py)
     * Given s, return list of all substrings of s
-    * Runtime: approx $O(n^2)$
+    * Runtime: approx O(n^2)
     
 ---
-
+* [Letter Combinations of a Phone Number](letterCombinationsPhoneNumber.py)
+    * Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
+    * Iterative and recursive solutions
 * [Longest Substring Without Repeating Characters](longestSubstringNoRepeats.py)  
     * Given a string, returns length of longest substring w/o repeating characters  
     * TODO: figure out a faster method
 * [Longest Palindromic Substring](longestPalindromicSubstring.py)
     * Given string, return longest palindromic substring
-    * Runtime: $O(n^2)$ using dynamic programming or expansion method, $O(n^3)$ for brute force solution
+    * Runtime: O(n^2) using dynamic programming or expansion method, O(n^3) for brute force solution
 * [Palindrome Permutation](palindromePermutation.py)
 	* Returns true if the string is a permutation of a palindrome by noting the number of characters that appear in the string an odd number of times.
 * [Repeated String](repeatedString.py)
