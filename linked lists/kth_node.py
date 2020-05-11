@@ -1,3 +1,46 @@
+"""
+Source: leetcode
+Input: head to linked list
+Output: head of the linked list after removing the n-th node
+
+Given a linked list, remove the n-th node from the end of list and return its head.
+
+Runtime: O(n)
+
+Two pointer method
+- Advance the first ptr by n nodes
+- Then, advance the first ptr and second ptr until the first ptr is None.
+- Now, the two pointers will be n nodes apart.
+- So the first ptr will be at the nth node from the end
+- Keep a reference to the previous node so you can delete the nth node
+""" 
+
+
+def nth_node(head, n):
+    """
+    Source: leetcode
+    Basing it off of my old solution.
+    Assume n is always valid.
+    """
+    first = head
+    second = head
+    while n > 0:
+        first = first.next
+        n -= 1
+    
+    # first is already None, so we remove the first node
+    if not first:
+        return head.next
+
+    while first is not None:
+        prev = second
+        first = first.next
+        second = second.next
+    
+    prev.next = second.next
+    return head
+
+
 def kth_node(head, k):
     """
     Given the head of a linked list, return the kth to last node of the linked list
@@ -39,6 +82,7 @@ def kth_node_rev(head, k):
     if rev is not None:
         rev.next = None # drop the rest of the linked list
     return rev
+
 
 def reverseLinkedlst(head):
     """

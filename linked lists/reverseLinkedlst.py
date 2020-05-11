@@ -1,12 +1,18 @@
-# Reverse a singly linked list
-class Linkedlst():
-    def __init__(self, head=None): 
-        self.head = head
+"""
+Input: head of a singly linked list
+Output: the reverse linked list
 
-class Node():
-    def __init__(self, val, next_node=None):
+Reverse a singly linked list
+
+Runtime: O(n)
+"""
+
+
+class ListNode:
+    def __init__(self, val):
         self.val = val
-        self.next = next_node
+        self.next = None
+
 
 def reverseLinkedlst(head):
     """
@@ -21,7 +27,6 @@ def reverseLinkedlst(head):
         curr = next_node
     return prev
 
-#lst = Linkedlst(Node("a", Node("b", Node("c", Node("d")))))
 
 def reverseLinkedListRecursive(head):
     """
@@ -35,3 +40,16 @@ def reverseLinkedListRecursive(head):
     # the current head becomes the last node
     head.next = None
     return new_head
+
+
+lst = ListNode("a")
+lst.next = ListNode("b")
+lst.next.next = ListNode("c")
+lst.next.next.next = ListNode("d")
+reverse = reverseLinkedlst(lst)
+original = reverseLinkedlst(reverse)
+assert lst == original
+
+reverse = reverseLinkedListRecursive(lst)
+original = reverseLinkedListRecursive(reverse)
+assert lst == original
