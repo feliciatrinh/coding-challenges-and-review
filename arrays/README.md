@@ -7,16 +7,16 @@
     * Return the number of subarrays containing m odd numbers.
     * Runtime: O(n) where n is the number of elements in the input array.
 * [Circular Array](circular_array.py)
-	* Given the number of nodes and a list of ending nodes representing the paths taken, return the node that is visited the most.
-	* Naive solution does not satisy runtime requirement.
+	* Given the number of nodes and a list of ending nodes (of length m) representing the paths taken, return the node that is visited the most.
+	* Naive Solution Runtime: O(n * m) does not satisfy runtime requirement.
 	* Optimal solution:
 * [Consecutive Sum](consecutive_sum.py)
 	* Given an int, find the number of ways to represent it as a sum of 2 or more consecutive integers.
 	* Solution uses the arithmatic sum formula.
 	* Runtime: linear with respect to the input integer?
-* [Cut Bamboo](cut_bamboo.py)
-	* Given an array of integer lengths, return an array of integers where each represents the number of pieces at the start of each turn.
-	* Runtime: worstcase O(n^2) when the lengths differ by 1 (e.g. [1, 2, 3, 4, 5...]) 
+* [Container with Most Water](containerWithMostWater.py)
+	* Given n non-negative integers a1, a2, ..., an , where each integer represents the height of a line; return the maximum possible area between any of two lines
+	* Runtime: O(n)
 * [Fibonacci](fibonacci.py)
 	* Return the nth fibonacci number using an iterative, recursive, tail recursive solutions.
 	* Worst runtime O(2^n), best runtime you usually see O(n)
@@ -35,6 +35,13 @@
 * [Sum to K](sum_to_k.py)
 	* Given an array of integers (not necessarily distinct), return the number of pairs that sum to k.
 	* Average runtime O(n)
+* [Three Sum](three_sum.py)
+	* Given an array of n integers, return a list of all unique triplets that sum to 0.
+	* Uses logic from the [Two Sum problem](two_sum.py) and itertools.groupby()
+	* Runtime: O(n^2)
+* [Three Sum Closest](three_sum_closest.py)
+	* Given an array nums of n integers and an integer target, return the sum of three integers in nums that is closest to target.
+	* Runtime: best case O(n^2) and worst case O(n^3)?
 * [Triple Product](tripleProduct.java)
 	* Given an array of positive and negative numbers, return the maximum possible product of 3 numbers.
 	* Runtime O(n)
@@ -48,6 +55,9 @@
     * Runtime: O(b)?
 * [Counting Valleys](countingValleys.py)
 	* From HackerRank
+* [Cut Bamboo](cut_bamboo.py)
+	* Given an array of integer lengths, return an array of integers where each represents the number of pieces at the start of each turn.
+	* Runtime: worstcase O(n^2) when the lengths differ by 1 (e.g. [1, 2, 3, 4, 5...]) 
 * [Hour Glass Sum](hourGlassSum.py)
 	* Return the maximum hourglass sum in a 2D array. An hourglass in A is a subset of values with indices falling in an hourglass pattern.
 * [Jumping on Clouds](jumpingOnClouds.py)

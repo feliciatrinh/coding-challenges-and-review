@@ -3,6 +3,7 @@ Input: n: number of nodes in the circular array; endNodes: list of ending nodes 
 Output: the node that is visited the most. If there are multiple, return the smallest numbered node.
 
 Circular array has n nodes numbered from 1 to n.
+Assume endNode[i] != endNode[i + 1]
 
 Example:
 Input: 3, [1, 3, 2, 3]
@@ -17,10 +18,28 @@ Nodes 2 and 3 are visited 3 times, so the lower numbered node is returned.
 Input: 10, [1, 5, 10, 5]
 Output: 5 (5 is visited 3 times)
 """
+import numpy as np
+
 
 def circular_array_optimal(n, endNodes):
+	pass
 
-	return
+
+def circular_arr_redo(n, endNodes):
+	"""
+	Redo of naive circular array solution using numpy.
+	"""
+	# 0th index remains 0, makes for easier indexing
+	visited = np.zeros(n + 1)
+	for i in range(len(endNodes) - 1):
+		start = endNodes[i]
+		end = endNodes[i + 1]
+		if start < end:
+			visited[start: end + 1] += 1
+		elif start > end:
+			visited[1: end + 1] += 1
+			visited[start: n + 1] += 1
+	return np.argmax(visited)
 
 
 def circular_array_naive(n, endNodes):
@@ -62,3 +81,7 @@ def circular_array_naive(n, endNodes):
 					maximum = visited[k]
 					node = k
 	return node
+
+
+assert circular_arr_redo(3, [1, 3, 2, 3]) == 2
+assert circular_arr_redo(10, [1, 5, 10, 5]) == 5
