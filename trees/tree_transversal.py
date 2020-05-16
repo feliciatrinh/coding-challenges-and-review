@@ -1,4 +1,6 @@
 """
+Source: leetcode
+
 - Pre-order traversal is SHOUT LEFT
     - parent first, then left, then right
 - In-order traversal is SHOUT BELOW

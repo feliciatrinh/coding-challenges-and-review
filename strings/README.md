@@ -1,5 +1,7 @@
 # Strings
 
+* [Generate Parentheses](generateParentheses.py)
+    * Given the number of pairs of parentheses, return all valid combinations of well-formed parentheses.
 * [Palindrome](isPalindrome.py)
     * Returns True if input string s is a palindrome, False otherwise
     * Runtime: O(n)

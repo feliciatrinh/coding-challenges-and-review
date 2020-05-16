@@ -19,10 +19,13 @@
 	* Two pointer method. Runtime O(n)
 * [Partition](partition.py)
 	* Partition a linked list around a value x such that all nodes with values less than x come before all nodes with values greater than or equal to x.
-	* Runtime O(n)
+	* Runtime: O(n)
 * [Remove Duplicates](removeDups.py)
 	* Remove duplicates from a singly linked list. 
-	* Runtime O(n)
+	* Runtime: O(n)
 * [Reverse](reverseLinkedlst.py)
 	* Reverse a singly linked list iteratively or recursively.
-	* Runtime O(n)
+	* Runtime: O(n)
+* [Swap Pairs](swapPairs.py)
+	* Swap nodes pairwise in a singly linked list.
+	* Runtime: O(n)
