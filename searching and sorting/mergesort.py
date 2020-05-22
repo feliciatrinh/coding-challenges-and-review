@@ -1,9 +1,10 @@
 """
-Mergesort
+Merge sort
 Input: an unsorted list
 Output: a sorted list
 
-Runtime O(nlogn)
+Runtime: O(nlogn)
+Space complexity: O(n)
 
 Idea:
   - Recursively split list in half, sort each half, merge together
@@ -12,7 +13,7 @@ Idea:
 def mergesort(lst):
     if len(lst) <= 1: 
         return lst
-    middle = len(lst)//2
+    middle = len(lst) // 2
     return merge(mergesort(lst[:middle]), mergesort(lst[middle:]))
     
 def merge(lst1, lst2):

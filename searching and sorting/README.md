@@ -1,13 +1,36 @@
 # Search and Sorting
 
-* [Count Occurrence](countOccurrence.py)
-	* Return the number of occurrences of an integer in a sorted array.
-	* Use binary search to find the first and last occurrence of n to take advantage of sortedness.
-	* Runtime: O(logn)
+## Sorting
+
+* [Bubble Sort](bubble_sort.py)
+	* Repeatedly swap adjacent elements until sorted.
+	* Runtime: O(n^2)
+* [Insertion Sort](insertion_sort.py)
+	* Repeatedly swap the first unsorted element with its left neighbor while the left neighbor is greater than it until sorted.
+	* Runtime: O(n^2)
 * [K Sort](k_sort.py)
 	* Return k sorted lists as a single sorted list
 	* Runtime: O(n * logk)
 	* Divide and conquer algorithm: sort each pair of k sorted lists using merge from mergesort recursively until only one list remains
+* [Merge Sort](mergesort.py)
+	* Sort an array by recursively splitting the array in half and merging the halves together.
+	* Stable sorting method.
+	* Runtime: O(nlogn)
+* [Quick Sort](quicksort.py)
+	* Sorts an array using a pivot
+	* Unstable sorting method
+	* Average runtime: O(nlogn), Worst-case runtime: (n^2)
+* [Selection Sort](selection_sort.py)
+	* Repeatedly swap the first unsorted element with the current minimum until sorted.
+	* Runtime: O(n^2)
+
+## Search
+
+* [Binary Search](binary_search.py)
+* [Count Occurrence](countOccurrence.py)
+	* Return the number of occurrences of an integer in a sorted array.
+	* Use binary search to find the first and last occurrence of n to take advantage of sortedness.
+	* Runtime: O(logn)
 * [Kth Smallest](kth_smallest.py)
 	* Given two sorted arrays of integers, each of size n, give the kth smallest element in the union of the two arrays.
 	* Runtime: O(logk)
@@ -20,17 +43,9 @@
 * [Median of Two Sorted Arrays](medianSortedArrays.py)
 	* Returns the median of two sorted arrays
 	* Runtime: O(log(n + m))
-* [Merge Sort](mergesort.py)
-	* Sort an array by recursively splitting the array in half and merging the halves together.
-	* Stable sorting method.
-	* Runtime: O(nlogn)
 * [Minimum Swaps](minimumSwaps.py)
 	* Given an unordered array consisting of consecutive integers (1, 2,..., n) without any duplicates, find the minimum number of swaps required to sort the array in ascending order.
 	* Runtime: O(n)
 * [Quick Select](quickselect.py)
 	* Given an array s of integers and an integer k, return the kth smallest element of s.
 	* Average runtime: O(n), Worst-case runtime: O(n^2)
-* [Quick Sort](quicksort.py)
-	* Sorts an array using a pivot
-	* Unstable sorting method
-	* Average runtime: O(nlogn), Worst-case runtime: (n^2)
