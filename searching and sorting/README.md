@@ -8,9 +8,9 @@
 * [Insertion Sort](insertion_sort.py)
 	* Repeatedly swap the first unsorted element with its left neighbor while the left neighbor is greater than it until sorted.
 	* Runtime: O(n^2)
-* [K Sort](k_sort.py)
-	* Return k sorted lists as a single sorted list
-	* Runtime: O(n * logk)
+* [Merge K Sorted Lists](merge_k_sorted.py)
+	* Merge k sorted lists, each of length n into a single sorted list containing all k * n elements
+	* Runtime: O(knlog(k))
 	* Divide and conquer algorithm: sort each pair of k sorted lists using merge from mergesort recursively until only one list remains
 * [Merge Sort](mergesort.py)
 	* Sort an array by recursively splitting the array in half and merging the halves together.

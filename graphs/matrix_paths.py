@@ -7,8 +7,6 @@ Output: Paths as lists
 Solution: use recursion to determine all possible paths when you can only move down and to the right.
 Runtime: exponential
 
-Solution: Could solve using dynamic programming instead to get a better runtime.
-
 Example: 
 [[1, 2, 3], 
  [4, 5, 6],

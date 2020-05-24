@@ -29,7 +29,7 @@
 	* Runtime O()
 * [Rotate Left](rotLeft.py)
 	* Shift each element d units to the left.
-* [Spiral](spiral.py)
+* [Spiral Order](spiral_order.py)
 	* Given a 2D matrix, return the spiral pattern as a flat array.
 	* Runtime O(nm)
 * [Sum to K](sum_to_k.py)

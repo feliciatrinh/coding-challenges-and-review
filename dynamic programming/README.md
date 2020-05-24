@@ -1,5 +1,8 @@
 # Dynamic Programming
 
+* [Count Matrix Paths](count_matrix_paths.py)
+	* Given the number of rows and columns in a matrix, return the number of unique paths from the top left corner to the bottom right corner when you can only move down or right.
+	* Runtime: O(mn), Space Complexity: O(n)
 * [Edit Distance]
 	* Given two strings x and y, find the minimum number of edits needed to transform x into y
 	* Runtime O(n^2)
