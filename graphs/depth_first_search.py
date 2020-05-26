@@ -2,72 +2,117 @@
 Depth first search can be used to find a path from start to every other
 reachable vertex, visiting each vertex at most once.
 
+Runtime: O(V + E)
+Space complexity: O(V)
+
 - mark v
 - for each unmarked adjacent vertex w: 
-	- set edgeTo[w] = v
-	- dfs(w)
+    - set edgeTo[w] = v
+    - dfs(w)
 
 - DFS preorder is order of dfs calls
 - DFS postorder is order of dfs returns
 
 Other uses for DFS: 
 - Finding strongly connected components.
-- 
 """
-from collections import deque
-
-
-class Graph():
-    def __init__(self):
-        self.adj = {}
-        
-    def add_edge(self, vertex, neighbor):
-        """
-        Adds an edge in vertex's adjacency list.
-        """
-        if vertex in self.adj:
-            self.adj[vertex].append(neighbor)
-        else:
-            self.adj[vertex] = [neighbor]
-
-
-def depth_first_search(graph, start):
-	"""
-	Assumes the graph is connected.
-	recursive solution
-    Prints depth first search graph traversal for a graph
-    with integer valued vertices.
-	"""
-	visited = False * len(graph.adj)
-	dfs_helper(start, visited)
-
-
-def dfs_helper(v, visited):
-	visited[v] = True
-	print(v, end=" ")
-	for w in graph.adj[v]:
-		if !visited[w]:
-			dfs_helper(w, visited)
 
 
 def dfs_iterative(graph, start):
     """
-    Iterative solution
-    Prints depth first search graph traversal for a graph
-    with integer valued vertices.
-    Uses a stack
+    Returns DFS traversal of a graph in a list.
     """
-    if graph is None:
-        return
-    marked = [False]*len(graph.adj)
-    q = deque()
-    q.append(start)
-    marked[start] = True
-    while q:
-        v = q.pop()
-        print(v, end=" ")
-        for neighbor in graph.adj[v]:
-            if not marked[neighbor]:
-                q.append(neighbor)
-                marked[neighbor] = True
-	
+    dfs_order = []
+    visited = {start}
+    stack = [start]
+    while stack:
+        v = stack.pop()
+        dfs_order.append(v)
+        for next_v in graph[v]:
+            if next_v not in visited:
+                stack.append(next_v)
+                visited.add(next_v)
+    return dfs_order
+
+
+def dfs_recursive(graph, start):
+    """
+    Returns DFS traversal of a graph in a list.
+    Recusive solution visits nodes in a different order than the iterative solution b/c it pushes nodes onto the stack
+    in a different order.
+
+    Example
+    Recursive visits nodes 1, 2, then 5 but iterative visits nodes 5, 2, then 1.
+    So imagine recursive solution pushes nodes onto the stack in this order: 5, 2, 1 and iterative solution pushes nodes
+    onto the stack in this order: 1, 2, 5
+    """
+    def dfs(graph, start, visited):
+        visited.add(start)
+        dfs_order.append(start)
+
+        for next_v in graph[start]:
+            if next_v not in visited:
+                dfs(graph, next_v, visited)
+
+    dfs_order = []
+    dfs(graph, start, set())
+    return dfs_order
+
+
+def dfs_paths_recursive(graph, start, goal):
+    """
+    Return all possible paths between start and goal using recursive DFS.
+    """
+    def dfs_paths(graph, start, goal, path):
+        if start == goal:
+            paths.append(path)
+            return
+
+        for next_v in graph[start]:
+            if next_v not in path:
+                dfs_paths(graph, next_v, goal, path + [next_v])
+
+    paths = []
+    dfs_paths(graph, start, goal, [start])
+    return paths
+
+
+def dfs_paths_iterative(graph, start, goal):
+    """
+    Return all possible paths between start and goal using iterative DFS.
+
+    Could use sets and set differences instead.
+    For set s and set t,
+    s.difference(t) is equivalent to s - t aka a new set with elements in s but not in t
+    set.difference can take any iterable as the second arg but s - t reqs both s and t to be sets.
+    """
+    paths = []
+    # stack elements are tuples of (current vertex, path from start to current vertex)
+    stack = [(start, [start])]
+    while stack:
+        (v, path) = stack.pop()
+        for next_v in graph[v]:
+            if next_v == goal:
+                paths.append(path + [next_v])
+            else:
+                if next_v not in path:
+                    stack.append((next_v, path + [next_v]))
+    return paths
+
+
+g = {
+    0: [1, 2, 5],
+    1: [],
+    2: [3],
+    3: [0, 7],
+    4: [5, 6, 7],
+    5: [1, 6],
+    6: [],
+    7: [6]
+}
+
+assert dfs_iterative(g, 0) == [0, 5, 6, 2, 3, 7, 1]
+assert dfs_recursive(g, 0) == [0, 1, 2, 3, 7, 6, 5]
+
+assert dfs_paths_iterative(g, 0, 6) == [[0, 5, 6], [0, 2, 3, 7, 6]]
+assert dfs_paths_recursive(g, 0, 6) == [[0, 2, 3, 7, 6], [0, 5, 6]]

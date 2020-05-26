@@ -1,7 +1,14 @@
+"""
+Input: list
+Output: list with no duplicates
+
+Runtime: O(n)
+"""
+
+
 def no_duplicates(lst):
     """
     Returns a (sorted) list with no duplicates. 
-    runtime O(n)
     The list will be sorted because we used a set. 
     Uses additional space for the set
     """
@@ -10,10 +17,10 @@ def no_duplicates(lst):
         no_dup.add(elem)
     return list(no_dup)
 
-def no_duplicates_2(lst): 
+
+def no_duplicates_2(lst):
     """
     Returns a list with no duplicates. Maintains the original order.
-    Runtime O(n)
     Uses additional space for a new list and a set
     """
     no_dup = set()

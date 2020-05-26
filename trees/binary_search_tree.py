@@ -14,14 +14,15 @@ Delete: avg O(logn), worst O(n)
 Worst case occurs when you have a spindly tree.
 """
 
-class Node():
-    def __init__(self, value, left=None, right=None): 
+
+class Node:
+    def __init__(self, value, left=None, right=None):
         self.value = value
         self.left = left
         self.right = right
 
 
-def search(root, value): 
+def search(root, value):
     """
     Returns true if value is found in the BST
     """
@@ -29,9 +30,9 @@ def search(root, value):
         return False
     if value < root.value:
         return search(root.left, value)
-    elif value > root.value: 
+    elif value > root.value:
         return search(root.right, value)
-    else: 
+    else:
         return True
 
 
@@ -40,11 +41,11 @@ def insert(root, value):
     Insert a new node with value as its key 
     TODO: check if this is right
     """
-    if root is None: 
+    if root is None:
         root = Node(value)
     elif value < root.value:
         root.left = insert(root.left, value)
-    elif value > root.value: 
+    elif value > root.value:
         root.right = insert(root.right, value)
     return root
 
@@ -67,55 +68,55 @@ def delete(root, value):
         - in-order successor will always have null left child
     - replace the node that's now a leaf with None
     """
-    if root is None: 
+    if root is None:
         return root
     if value < root.value:
         root.left = delete(root.left, value)
-    elif value > root.value: 
+    elif value > root.value:
         root.right = delete(root.right, value)
-    else: 
+    else:
         # delete the root
         if root.value == value:
             if root.left is None:
                 return root.right
-            elif root.right is None: 
+            elif root.right is None:
                 return root.left
             elif root.left is None and root.right is None:
                 return None
-            else: 
+            else:
                 # find the smallest key in the right subtree
                 # remove this smallest key from the subtree
                 # set the root's value to this smallest key
-                smallest = minVal(root.right)
+                smallest = min_val(root.right)
                 root.right = delete(root.right, smallest)
                 root.value = smallest
     return root
 
 
-def minVal(root):
+def min_val(root):
     """
     Returns the smallest value in the given BST.
     Traverse through the left subtree. Average runtime is O(log(n))
     """
     if root.left:
-        return minVal(root.left)
+        return min_val(root.left)
     return root.value
 
 
-def isBST(root, left=None, right=None):
+def is_bst(root, left=None, right=None):
     """
     Returns true if given binary tree is a BST and returns false otherwise.
     Assumes no duplicate keys. 
     Runtime O(n)
     """
-    if root is None: 
+    if root is None:
         return True
     # left node's value is >= root's value, not a BST
     if left is not None and left.value >= root.value:
         return False
-    if right is not None and right.value <= root.value: 
+    if right is not None and right.value <= root.value:
         return False
-    return isBST(root.left, left, root) and isBST(root.right, root, right)
+    return is_bst(root.left, left, root) and is_bst(root.right, root, right)
 
 
 tree = Node(5, Node(3, Node(2), Node(4)), Node(7, Node(6), Node(8)))
@@ -129,4 +130,3 @@ delete(tree, 5) results in
     3       7
   2  4        8  
 """
-        

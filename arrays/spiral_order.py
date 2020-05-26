@@ -26,7 +26,6 @@ Idea:
 - Remove the bottom and left layer of the matrix and add it to your spiral
 - Repeat until there is only one element remaining in the matrix
 - This works b/c you mutate the matrix as you go along
-
 """
 
 
@@ -34,6 +33,7 @@ def spiral_order(matrix):
     """
     Return the matrix in spiral order as a single list.
     """
+
     def layer_top_right(matrix):
         """
         Return the top row and right column of the matrix.
@@ -78,6 +78,6 @@ matrix_2 = [
     [9, 10, 11, 12]
 ]
 
-assert spiral_order(matrix_1) == [1,2,3,6,9,8,7,4,5]
-assert spiral_order(matrix_2) == [1,2,3,4,8,12,11,10,9,5,6,7]
-assert spiral_order([[7],[9],[6]]) == [7, 9, 6]
+assert spiral_order(matrix_1) == [1, 2, 3, 6, 9, 8, 7, 4, 5]
+assert spiral_order(matrix_2) == [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]
+assert spiral_order([[7], [9], [6]]) == [7, 9, 6]

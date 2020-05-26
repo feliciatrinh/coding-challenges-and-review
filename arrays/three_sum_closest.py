@@ -54,4 +54,4 @@ def three_sum_closest(nums, target):
 
 assert three_sum_closest([-1, 2, 1, -4], 1) == 2
 assert three_sum_closest([-5, -10, -15], 2) == -30
-assert three_sum_closest([1,2,4,8,16,32,64,128], 82) == 82
+assert three_sum_closest([1, 2, 4, 8, 16, 32, 64, 128], 82) == 82

@@ -24,18 +24,20 @@ Output: [4, 2]
 
 """
 
+
 def cut_bamboo(lengths):
-	pieces = [] # number of pieces at the start of each turn
-	numPieces = len(lengths)
-	while numPieces > 0:
-		piecesRemoved = 0
-		minLength = min(lengths)
-		pieces.append(len(lengths))
-		for i in range(len(lengths)):
-			if lengths[i] == minLength:
-				numPieces -= 1
-				piecesRemoved += 1
-			lengths[i] -= minLength
-		for j in range(piecesRemoved):
-			lengths.remove(0)
-	return pieces
+    # number of pieces at the start of each turn
+    pieces = []
+    numPieces = len(lengths)
+    while numPieces > 0:
+        piecesRemoved = 0
+        minLength = min(lengths)
+        pieces.append(len(lengths))
+        for i in range(len(lengths)):
+            if lengths[i] == minLength:
+                numPieces -= 1
+                piecesRemoved += 1
+            lengths[i] -= minLength
+        for j in range(piecesRemoved):
+            lengths.remove(0)
+    return pieces
