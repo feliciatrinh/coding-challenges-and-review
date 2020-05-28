@@ -16,8 +16,9 @@
 	* Given a list of Fraction objects, return the product in lowest terms.
 * [Number of Holes in Digits](num_holes_in_digits.py)
 	* Return the total number of holes in integer input.
-* [Odds Using Randint](odds_using_randint.py)
-	* Given an inclusive interval, return all odd numbers in the interval using randint with equal probability.
+* [Random Odd](random_odd.py)
+	* Given a random function random(a, b) that returns a random integer in the range of a to b, implement a
+	randomOdd(a, b) function that returns a random odd integer in the range of a to b
 * [Reverse Integer](reverse_integer.py)
 	* Given a 32-bit signed integer, return the reverse
 	* Runtime: O(n) in number of digits?
