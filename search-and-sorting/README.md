@@ -42,7 +42,7 @@
 	* Deterministically pick a better pivot for an algorithm like QuickSelect.
 	* Runtime: O(n)
 * [Median of Two Sorted Arrays](median_sorted_arrays.py)
-	* Returns the median of two sorted arrays
+	* Returns the median of two sorted arrays using the same idea as [Kth Smallest](kth_smallest.py).
 	* Runtime: O(log(n + m))
 * [Minimum Swaps](minimum_swaps.py)
 	* Given an unordered array consisting of consecutive integers (1, 2,..., n) without any duplicates, find the minimum
