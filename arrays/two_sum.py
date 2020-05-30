@@ -25,8 +25,8 @@ def two_sum_alt(nums, target):
     """
     :return: two integers in nums that sum to target
     """
-    have_seen = {nums[0]}
-    for num in nums[1:]:
+    have_seen = set()
+    for num in nums:
         complement = target - num
         if complement in have_seen:
             return complement, num

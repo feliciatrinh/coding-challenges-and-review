@@ -27,9 +27,8 @@ class MyCircularDeque:
         self.lastIndex = 1
         self.deque = [0] * self.capacity
         self.size = 0  # current size
-        
 
-    def insertFront(self, value: int) -> bool:
+    def insert_front(self, value: int) -> bool:
         """
         Adds an item at the front of Deque. Return true if the operation is successful.
         """
@@ -39,12 +38,11 @@ class MyCircularDeque:
             if self.frontIndex == 0:
                 self.frontIndex = self.capacity - 1
             else:
-                self.frontIndex -= 1                
+                self.frontIndex -= 1
             return True
         return False
-        
 
-    def insertLast(self, value: int) -> bool:
+    def insert_last(self, value: int) -> bool:
         """
         Adds an item at the rear of Deque. Return true if the operation is successful.
         """
@@ -57,9 +55,8 @@ class MyCircularDeque:
                 self.lastIndex += 1
             return True
         return False
-        
-        
-    def deleteFront(self) -> bool:
+
+    def delete_front(self) -> bool:
         """
         Deletes an item from the front of Deque. Return true if the operation is successful.
         """
@@ -71,9 +68,8 @@ class MyCircularDeque:
             self.frontIndex += 1
         self.size -= 1
         return True
-        
 
-    def deleteLast(self) -> bool:
+    def delete_last(self) -> bool:
         """
         Deletes an item from the rear of Deque. Return true if the operation is successful.
         """
@@ -85,10 +81,9 @@ class MyCircularDeque:
         else:
             self.lastIndex -= 1
         self.size -= 1
-        return True        
+        return True
 
-    
-    def getFront(self) -> int:
+    def get_front(self) -> int:
         """
         Get the front item from the deque.
         """
@@ -97,9 +92,8 @@ class MyCircularDeque:
         if self.frontIndex == self.capacity - 1:
             return self.deque[0]
         return self.deque[self.frontIndex + 1]
-        
 
-    def getRear(self) -> int:
+    def get_rear(self) -> int:
         """
         Get the last item from the deque.
         """
@@ -107,22 +101,19 @@ class MyCircularDeque:
             return -1
         if self.lastIndex == 0:
             return self.deque[self.capacity - 1]
-        return self.deque[self.lastIndex - 1]        
+        return self.deque[self.lastIndex - 1]
 
-    
-    def isEmpty(self) -> bool:
+    def is_empty(self) -> bool:
         """
         Checks whether the circular deque is empty or not.
         """
         return self.size == 0
-        
 
-    def isFull(self) -> bool:
+    def is_full(self) -> bool:
         """
         Checks whether the circular deque is full or not.
         """
         return self.size == self.capacity
-        
 
 # Your MyCircularDeque object will be instantiated and called as such:
 # obj = MyCircularDeque(k)
