@@ -42,6 +42,7 @@
 	string an odd number of times.
 * [Repeated String](repeated_string.py)
 	* Return the number of occurrences of "a" in the prefix of length n in an infinitely repeating string.
+* [Reverse String](reverse_string.py)
 * [URLify](urlify.py)
 * [Zig Zag Conversion](zig_zag_conversion.py)
     * Given a string, return the zig zag conversion of the string (tests if you can find the pattern?)

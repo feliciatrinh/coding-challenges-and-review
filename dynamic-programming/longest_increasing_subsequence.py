@@ -40,7 +40,7 @@ def longest_increasing_subsequence(arr):
         """
         graph = {i: [] for i in range(len(arr))}
         for i in range(len(arr)):
-            for j in range(0, i):
+            for j in range(i):
                 if arr[j] < arr[i]:
                     graph[i].append(j)
         return graph

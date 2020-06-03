@@ -31,7 +31,7 @@ def best_pairs(k, arr):
     for elem in arr:
         if elem + k in arr_set: 
             count += 1
-    return count 
+    return count
 
 
 def binary_search(n, arr):

@@ -119,6 +119,13 @@ def is_bst(root, left=None, right=None):
     return is_bst(root.left, left, root) and is_bst(root.right, root, right)
 
 
+def find_height(root):
+    height = 0
+    if not root or (root.left is None and root.right is None):
+        return height
+    return 1 + max(find_height(root.left), find_height(root.right))
+
+
 tree = Node(5, Node(3, Node(2), Node(4)), Node(7, Node(6), Node(8)))
 """
         5
@@ -130,3 +137,6 @@ delete(tree, 5) results in
     3       7
   2  4        8  
 """
+assert find_height(tree) == 2
+tree = Node(5, Node(3, Node(2), Node(4)), Node(7, Node(6)))
+assert find_height(tree) == 2

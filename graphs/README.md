@@ -15,6 +15,3 @@
 	* Runtime: O(V + E), Space complexity: O(V)
 * [Dijkstra's Algorithm](dijkstra.py)
 	* 
-* [Matrix Paths](matrix_paths.py)
-	* Print all possible paths from the top left to the bottom right of an m x n matrix.
-	* Runtime: exponential?

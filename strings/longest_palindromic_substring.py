@@ -56,8 +56,6 @@ def expand_around_center(s: str) -> str:
         # subtract 1 b/c you expanded one extra before the while loop ended
         return right - left - 1
 
-
-
     # also takes care of when s is the empty string
     if is_palindrome(s):
         return s
@@ -134,6 +132,7 @@ def brute_force_longest_palindrome(s: str) -> str:
     for a substring and verify if it's a palindrome.
     Runtime: O(n^3)
     """
+
     def substrings(s):
         """ Runtime: O(n^2) """
         from itertools import combinations

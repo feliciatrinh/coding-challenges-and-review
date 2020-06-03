@@ -42,7 +42,7 @@ def helper(matrix, i, j):
                 last_col = col
                 last_row = row
             else:
-                if row > last_row or row == len(matrix):
+                if row > last_row or row == len(matrix) - 1:
                     return last_row, last_col
                 break
     return last_row, last_col
@@ -59,4 +59,4 @@ matrix = [
     [1, 1, 0, 1, 1, 1, 0]
 ]
 
-print(rectangles(matrix))
+assert rectangles(matrix) == [[(0, 1), (0, 1)], [(1, 2), (1, 2)], [(2, 3), (3, 5)], [(3, 1), (4, 1)], [(5, 3), (5, 6)], [(7, 2), (7, 2)], [(7, 6), (7, 6)]]

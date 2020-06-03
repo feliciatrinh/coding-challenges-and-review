@@ -13,20 +13,16 @@
 	that is visited the most.
 	* Naive Solution Runtime: O(n * m) does not satisfy runtime requirement.
 	* Optimal solution:
-* [Consecutive Sum](consecutive_sum.py)
-	* Given an int, find the number of ways to represent it as a sum of 2 or more consecutive integers.
-	* Solution uses the arithmatic sum formula.
-	* Runtime: linear with respect to the input integer?
 * [Container with Most Water](container_with_most_water.py)
 	* Given n non-negative integers a1, a2, ..., an , where each integer represents the height of a line; return the
 	maximum possible area between any of two lines
 	* Runtime: O(n)
-* [Fibonacci](fibonacci.py)
-	* Return the nth fibonacci number using an iterative, recursive, tail recursive solutions.
-	* Worst runtime O(2^n), best runtime you usually see O(n)
 * [K Difference](k_difference.py)
 	* Given array of distinct integers, count the number of pairs of integers with difference k.
 	* Runtime: O(n)
+* [Matrix Paths](matrix_paths.py)
+	* Print all possible paths from the top left to the bottom right of an m x n matrix.
+	* Runtime: exponential?
 * [Overlapping Region Grid Game](overlapping_region_grid_game.py)
 	* Given a list of n lists in which each of the n lists is a pair of integers a and b, return the total number of
 	occurrences of the greatest integer x in the grid after n steps
@@ -56,7 +52,7 @@
 ## Less Relevant Problems
 * [Bone Trousle](bonetrousle.py)
     * Given the values of n, k, and b for trips to the store, determine which boxes Papyrus must purchase during each
-    trip. He purchases exactly b boxes, has k boxes availble at the store where each box contains k sticks, wants n
+    trip. He purchases exactly b boxes, has k boxes available at the store where each box contains k sticks, wants n
     sticks total. Outputs one possible solution.
     * Runtime: O(b)?
 * [Counting Valleys](counting_valleys.py)
@@ -71,10 +67,10 @@
 * [Jumping on Clouds](jumping_on_clouds.py)
 	* Return the minimum number of jumps it'll take Emma to jump from her starting position to the last cloud.
 * [Minimum Bribes](minimum_bribes.py)
-* [No Duplicates](no_duplicates.py)
 * [Rectangles](rectangles.py)
 	* Given a 2D array filled with 1s and 0s, find the starting and end point of all rectangles filled with 0.
 	* Runtime: O()
+* [Remove Duplicates](remove_duplicates.py)
 * [Rotate Left](rot_left.py)
 	* Shift each element d units to the left.
 * [Sock Merchant](sock_merchant.py)

@@ -42,11 +42,9 @@ def maximum_subarray(arr):
     last_index = 0
     for i, A_i in enumerate(arr[1:], 1):
         local_max_sum = max(M[i - 1] + A_i, A_i)
+        M[i] = local_max_sum
         if M[i - 1] + A_i > A_i:
-            M[i] = M[i - 1] + A_i
             prev[i] = i - 1
-        else:
-            M[i] = A_i
 
         if local_max_sum > max_sum:
             max_sum = local_max_sum

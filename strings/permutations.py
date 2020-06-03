@@ -9,7 +9,7 @@ def permutations(s):
     """
     if len(s) <= 1:
         return [s]
-    perms = permutations(s[0:len(s)-1])
+    perms = permutations(s[:len(s)-1])
     last = s[-1]
     all_perms = []
     for p in perms:

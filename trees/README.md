@@ -6,6 +6,7 @@
 	* delete()
 	* minVal()
 	* isBST()
+	* find_height()
 * [Binary Tree to Binary Search Tree](binary_tree_to_bst.py)
 	* Given a binary tree, return it as a binary search tree without changing the spatial structure.
 	* Runtime: O(nlogn)
@@ -14,6 +15,8 @@
 * [Minimal Tree](minimal_tree.py)
 	* Given a sorted increasing order array with unique integer elements, create a BST with minimal height.
 	* Runtime: O(n)? recursive solution
+* [Is Symmetric](is_symmetric.py)
+    * Given a binary tree, return True if symmetric and False otherwise.
 * [Tree Traversal](tree_traversal.py)
 	* Pre-order
 	* In-order

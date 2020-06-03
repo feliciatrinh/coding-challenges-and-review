@@ -14,13 +14,13 @@ def bfs(graph, start):
     """
     bfs_order = []
     visited = {start}
-    stack = [start]
-    while stack:
-        v = stack.pop(0)
+    queue = [start]
+    while queue:
+        v = queue.pop(0)
         bfs_order.append(v)
         for next_v in graph[v]:
             if next_v not in visited:
-                stack.append(next_v)
+                queue.append(next_v)
                 visited.add(next_v)
     return bfs_order
 
@@ -64,9 +64,8 @@ def route_between_nodes(graph, start, goal):
     """
     :return: True if there is a path between the start and goal, False otherwise
     """
-    visited = set()
+    visited = {start}
     queue = [start]
-    visited.add(start)
     while queue:
         v = queue.pop(0)
         for neighbor in graph[v]:

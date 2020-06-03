@@ -29,25 +29,25 @@ def three_sum(nums):
         Runtime: O(n) 
         """
         result = []
-        ints = set()
+        have_seen = set()
         for num in nums:
             complement = target - num
-            if complement in ints:
+            if complement in have_seen:
                 # create sorted pairs
                 result.append([min(complement, num), max(complement, num)])
-            ints.add(num)
+            have_seen.add(num)
         return result
 
     if len(nums) < 3:
         return []
 
     triplets = []
-    ints = set()
+    have_seen = set()
     for i, num in enumerate(nums):
         # if we've already seen num
-        if num in ints:
+        if num in have_seen:
             continue
-        ints.add(num)
+        have_seen.add(num)
         pairs = two_sum(nums[:i] + nums[i + 1:], -1 * num)
         for pair in pairs:
             a, b = pair
@@ -68,11 +68,8 @@ def two_sum_alt(nums, target):
     """
     Given an array of integers, return 2 integers in nums that sum to target and None otherwise.
     """
-    if not nums:
-        return None
-
-    have_seen = {nums[0]}
-    for num in nums[1:]:
+    have_seen = set()
+    for num in nums:
         complement = target - num
         if complement in have_seen:
             return complement, num

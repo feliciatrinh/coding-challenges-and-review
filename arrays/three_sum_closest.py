@@ -29,12 +29,12 @@ def three_sum_closest(nums, target):
         that sum to target and False otherwise.
         Runtime: O(n) 
         """
-        ints = set()
+        have_seen = set()
         for num in nums:
             complement = target - num
-            if complement in ints:
+            if complement in have_seen:
                 return True
-            ints.add(num)
+            have_seen.add(num)
         return False
 
     if len(nums) == 3:

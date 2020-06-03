@@ -48,7 +48,7 @@ assert add_fracs_and_reduce_string_better("722/148+360/176") == "2818/407"
 
 
 def gcd(a, b):
-    if (a == 0):
+    if a == 0:
         return b
     return gcd(b % a, a)
 

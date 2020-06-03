@@ -30,7 +30,7 @@ def two_sum_alt(nums, target):
         complement = target - num
         if complement in have_seen:
             return complement, num
-        have_seen.add(complement)
+        have_seen.add(num)
 
 
 def two_sum_alt_recursive(nums, target, have_seen):

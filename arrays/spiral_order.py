@@ -39,9 +39,6 @@ def spiral_order(matrix):
         Return the top row and right column of the matrix.
         """
         top = matrix.pop(0)
-        # for row in matrix:
-        #     if len(row) == 1:
-        #         return top + 
         right = [row.pop() for row in matrix if row]
         return top + right
 

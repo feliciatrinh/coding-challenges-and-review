@@ -38,7 +38,7 @@ def dfs_iterative(graph, start):
 def dfs_recursive(graph, start):
     """
     Returns DFS traversal of a graph in a list.
-    Recusive solution visits nodes in a different order than the iterative solution b/c it pushes nodes onto the stack
+    Recursive solution visits nodes in a different order than the iterative solution b/c it pushes nodes onto the stack
     in a different order.
 
     Example
@@ -57,6 +57,18 @@ def dfs_recursive(graph, start):
     dfs_order = []
     dfs(graph, start, set())
     return dfs_order
+
+
+def dfs_recursive_print(graph, start):
+    def dfs(graph, start, visited):
+        visited.add(start)
+        print(start, end=" ")
+
+        for next_v in graph[start]:
+            if next_v not in visited:
+                dfs(graph, next_v, visited)
+
+    dfs(graph, start, set())
 
 
 def dfs_paths_recursive(graph, start, goal):
@@ -116,3 +128,5 @@ assert dfs_recursive(g, 0) == [0, 1, 2, 3, 7, 6, 5]
 
 assert dfs_paths_iterative(g, 0, 6) == [[0, 5, 6], [0, 2, 3, 7, 6]]
 assert dfs_paths_recursive(g, 0, 6) == [[0, 2, 3, 7, 6], [0, 5, 6]]
+
+dfs_recursive_print(g, 0)

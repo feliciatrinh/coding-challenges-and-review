@@ -1,5 +1,5 @@
 """
-Calculate the nth fibonacci number iteratively, recusively, tail recusively, etc. 
+Calculate the nth fibonacci number iteratively, recursively, tail recursively, etc.
 Analyze runtime for each. 
 """
 
@@ -16,12 +16,12 @@ def fib1(n):
     return fib1(n - 1) + fib1(n - 2)
 
 
-def fib2(n, k, f0, f1): 
+def fib2(n, k, f0, f1):
     """
-    Recursive approach that avoids redundant computations. 
+    Recursive approach that avoids redundant computations.
     Runtime O(n)
     """
-    if n == k: 
+    if n == k:
         return f0
     return fib2(n, k + 1, f1, f0 + f1)
 
@@ -58,3 +58,29 @@ def fib4(n):
         curr = prev + curr
         prev = temp
     return curr
+
+
+def random_fib(k):
+    """
+    :param k: integer
+    :return: a random fibonacci number less than k
+
+    Runtime: O(logk) assuming calculating the fibonacci numbers is exponential
+    if k is invalid, return -1
+    """
+    from random import choice
+
+    if k <= 0:
+        return -1
+
+    if k == 1:
+        return 0
+
+    fibs = [0, 1]
+    for i in range(2, k):
+        next_fib = fibs[i - 2] + fibs[i - 1]
+        if next_fib < k:
+            fibs.append(next_fib)
+        else:
+            break
+    return choice(fibs)
