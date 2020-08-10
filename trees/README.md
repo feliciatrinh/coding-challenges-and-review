@@ -7,6 +7,9 @@
 	* minVal()
 	* isBST()
 	* find_height()
+* [Binary Tree Lowest Common Ancestor](binary_tree_lowest_common_ancestor.py)
+    * Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+    * Runtime: O(n), Space complexity: O(n)
 * [Binary Tree to Binary Search Tree](binary_tree_to_bst.py)
 	* Given a binary tree, return it as a binary search tree without changing the spatial structure.
 	* Runtime: O(nlogn)
