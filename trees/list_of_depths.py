@@ -4,28 +4,26 @@ Output: list of linked lists of all nodes at each depth of the tree
 """
 
 
-class TreeNode():
-    def __init__(self, root, left=None, right=None):
-        self.root = root
+class TreeNode:
+    def __init__(self, val, left=None, right=None):
+        self.val = val
         self.left = left
         self.right = right
 
 
-class LinkedList:
-    def __init__(self, first=None):
-        self.first = first
+class ListNode:
+    def __init__(self, val, next_node=None):
+        self.val = val
+        self.next = next_node
 
-    def add(self, item):
-        if self.first:
-            tail = self.first
-            while tail.next:
-                tail = tail.next
-            tail.next = item
-        else:
-            self.first = item
+    def add(self, val):
+        curr = self
+        while curr.next:
+            curr = curr.next
+        curr.next = ListNode(val)
 
     def __str__(self):
-        curr = self.first
+        curr = self
         values = ""
         while curr.next:
             values += " {} ->".format(curr.val)
@@ -33,35 +31,34 @@ class LinkedList:
         return values + " {}".format(curr.val)
 
 
-class Node:
-    def __init__(self, val=0, next_node=None):
-        self.val = val
-        self.next = next_node
+def list_of_depths(root):
+    def add_to_linked_list(linked_list, val):
+        if linked_list is None:
+            return ListNode(val)
+        linked_list.add(val)
+        return linked_list
 
-
-def list_of_depths(tree):
-    lst, queue_curr = [], []
-    curr_level = LinkedList(Node(tree.root))
+    linked_lists, queue_curr = [], []
+    curr_linked_list = ListNode(tree.val)
     if tree:
-        queue_curr.append(tree)
+        queue_curr.append(root)
     while queue_curr:
-        lst.append(curr_level)
+        linked_lists.append(curr_linked_list)
         queue_parents = []
-        curr_level = LinkedList()  # the linked list for this depth
-        # fill up queue_parents with the parent nodes 
+        curr_linked_list = None
+        # fill up queue_parents with the parent nodes
         # so that we can fill queue_curr with all the children separately
         while queue_curr:
             queue_parents.append(queue_curr.pop())
         # look at each parent node
         for parent in queue_parents:
             if parent.left:
-                # add this node to this depth's linked list
-                curr_level.add(Node(parent.left.root))
+                curr_linked_list = add_to_linked_list(curr_linked_list, parent.left.val)
                 queue_curr.append(parent.left)
             if parent.right:
-                curr_level.add(Node(parent.right.root))
+                curr_linked_list = add_to_linked_list(curr_linked_list, parent.right.val)
                 queue_curr.append(parent.right)
-    return lst
+    return linked_lists
 
 
 # tests for visualization purposes

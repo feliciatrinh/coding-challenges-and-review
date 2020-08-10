@@ -4,7 +4,7 @@ Input: Binary tree
 Output: Binary Search Tree with the same spatial structure
 
 Runtime: O(nlogn) for sorting
-Space compexity: O(n)
+Space complexity: O(n)
 
 Can achieve O(1) space complexity by using Morris Traversal.
 
@@ -15,7 +15,7 @@ Input:
  3     4      5
   6             7
    8
-Binary seach tree:
+Binary search tree:
           5
     3           8
  0     4      6
@@ -59,7 +59,7 @@ def binary_tree_to_bst(root: Node) -> None:
     def change_node_vals(root, sorted_inorder):
         """
         Traverses through the binary tree using in-order traversal and replaces the current node value with
-        sorted_inorder[index].
+        sorted_inorder[0].
         """
         if root is None:
             return
