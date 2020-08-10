@@ -1,6 +1,6 @@
 """
 Input: array of n integers
-Output: list of consecutive indices that give the greatest sum
+Output: list of consecutive integers from the array that give the greatest sum
 
 Runtime: O(n)
 

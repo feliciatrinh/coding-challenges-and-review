@@ -1,5 +1,8 @@
 # Dynamic Programming
 
+* [Buy Sell Stocks K Transactions](buy_sell_stocks_k_transactions.py)
+    * Given list for which the i-th element is the price of a given stock on day i, output maximum profit when you can complete at most k transactions
+    * Runtime: O(nk), Space Complexity: O(nk) or O(n) with more efficient solution
 * [Count Matrix Paths](count_matrix_paths.py)
 	* Given the number of rows and columns in a matrix, return the number of unique paths from the top left corner to
 	the bottom right corner when you can only move down or right.
@@ -15,7 +18,7 @@
 	* Given an array of integers, return the longest increasing subsequence.
 	* Turn the problem into a DAG and solve longest path
 	* Runtime: O(n^2)
-* [Longest Palindromic Substring](/strings/longest_palindromic_substring.py)
+* [Longest Palindromic Substring](../strings/longest_palindromic_substring.py)
 	* Given string s, return the longest palindromic substring of s
 	* Runtime: O(n^2)
 * [Maximum Subarray](maximum_subarray.py)
