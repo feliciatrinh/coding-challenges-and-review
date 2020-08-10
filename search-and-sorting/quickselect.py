@@ -1,10 +1,11 @@
 """
+Source: CS 170 UC Berkeley
 Input: a list of numbers s; an integer k
 Output: the kth smallest element of s
 
 Quickselect alg for finding the kth smallest element in an unsorted array
 picks an arbitrary pivot then partitions the array into 3 pieces:
-elements less than the pivot, elements equal to the pivot, elements greater than pivot. 
+elements less than the pivot, elements equal to the pivot, elements greater than pivot.
 It is then recursively called on the piece of the array
 that still contains the kth smallest element.
 
