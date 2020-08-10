@@ -6,14 +6,14 @@ Runtime: O(V + E)
 Space complexity: O(V)
 
 - mark v
-- for each unmarked adjacent vertex w: 
+- for each unmarked adjacent vertex w:
     - set edgeTo[w] = v
     - dfs(w)
 
 - DFS preorder is order of dfs calls
 - DFS postorder is order of dfs returns
 
-Other uses for DFS: 
+Other uses for DFS:
 - Finding strongly connected components.
 """
 
@@ -112,6 +112,26 @@ def dfs_paths_iterative(graph, start, goal):
     return paths
 
 
+def dfs_path_exists(graph, start, goal):
+    """
+    Recursive
+    :return: True if there is a path b/w start and goal, False otherwise
+    """
+    def visit(graph, start, goal, visited):
+        if start == goal:
+            return True
+        visited.add(start)
+        for next_v in graph[start]:
+            if next_v not in visited:
+                if visit(graph, next_v, goal, visited):
+                    return True
+
+    visited = set()
+    if visit(graph, start, goal, visited):
+        return True
+    return False
+
+
 g = {
     0: [1, 2, 5],
     1: [],
@@ -130,3 +150,5 @@ assert dfs_paths_iterative(g, 0, 6) == [[0, 5, 6], [0, 2, 3, 7, 6]]
 assert dfs_paths_recursive(g, 0, 6) == [[0, 2, 3, 7, 6], [0, 5, 6]]
 
 dfs_recursive_print(g, 0)
+assert dfs_path_exists(g, 0, 6) is True
+assert dfs_path_exists(g, 0, 4) is False

@@ -1,7 +1,7 @@
 """
 Source:
 Input: string s
-Output: True if string is a palindrome, False otherwise
+Output: True if a permutation of string is a palindrome, False otherwise
 
 Example 1:
 Input: "a"
@@ -19,19 +19,17 @@ import re
 from collections import Counter
 
 
-def pali(str): 
-    if len(str) == 1: 
+def palindrome_permutation(string):
+    if len(string) == 1:
         return True
-    str = str.lower()
-    str = re.sub(r"\s", "", str)
-    letters = Counter()
-    for char in str: 
-        letters[char] += 1
+
+    string = re.sub(r"\s", "", string.lower())
+    letters = Counter(string)
     odd_only = 0
-    for char in str: 
+    for char in string:
         if letters[char] % 2 != 0: 
             odd_only += 1
-    # palindromes can have max 1 character that shows up an odd num of times
-    if odd_only > 1:
-        return False
+        # palindromes can have max 1 character that shows up an odd num of times
+        if odd_only > 1:
+            return False
     return True

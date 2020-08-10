@@ -34,9 +34,9 @@ def count_primes_naive(n):
                 prime = False
                 break
         if prime:
-            continue
-        else:
             count += 1
+        else:
+            continue
     return count
 
 

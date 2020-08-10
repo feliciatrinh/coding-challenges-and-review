@@ -5,7 +5,7 @@ Output: all possible letter combinations that the number could represent
 
 Runtime: exponential?
 
-Iterative solution and recusive solution
+Iterative solution and recursive solution
 """
 
 

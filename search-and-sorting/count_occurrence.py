@@ -49,7 +49,7 @@ def first_occurrence(arr, n, start, end):
         return None
 
     # arr[mid] is the first occurrence of n
-    if n == arr[mid] and (n > arr[mid - 1] or mid == 0):
+    if n == arr[mid] and (mid == 0 or n > arr[mid - 1]):
         return mid
     # search the left half
     elif n <= arr[mid]:
@@ -73,7 +73,7 @@ def last_occurrence(arr, n, start, end):
         return None
 
     # arr[mid] is the last occurrence of n
-    if n == arr[mid] and (n < arr[mid + 1] or n == len(arr) - 1):
+    if n == arr[mid] and (n == len(arr) - 1 or n < arr[mid + 1]):
         return mid
     # search the left half
     elif n < arr[mid]:

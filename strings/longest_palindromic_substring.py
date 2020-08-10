@@ -30,7 +30,7 @@ def expand_around_center(s: str) -> str:
     Source: leetcode
     Runtime: O(n^2), Space complexity: O(1)
 
-    Idea: 
+    Idea:
     - palindromes mirror around its center, so palindromes can be expanded
       from its center
     - each string has 2n - 1 possible centers (start from the first letter,
@@ -40,7 +40,7 @@ def expand_around_center(s: str) -> str:
     - Start from a center, look at the letter to the left and the letter to the
       right. If they are the same, then keep expanding outward.
 
-    - Use left and right pointers to keep track of where the center is 
+    - Use left and right pointers to keep track of where the center is
     - left and right pointers begin at index 0. Left and right can either point
       to the same letter, or right can be left + 1
     """
@@ -87,7 +87,7 @@ def dynamic_longest_palindrome(s: str) -> str:
                 P(i, i + 1) = s[i] == s[i + 1]
     Recurrence Relation:
                 P(i, j) = ( P(i + 1, j - 1) and (s[i] == s[j]) )
-    
+
     - we already look at 2 letter substrings in the second base case, so we
       then look at 3 letter substrings, then 4 letter substrings and so on.
     - if the inside substring is a palindrome, then the entire string is a
@@ -143,7 +143,7 @@ def brute_force_longest_palindrome(s: str) -> str:
 
     # sorted() runtime is O(nlog(n))
     substrs = sorted(substrings(s), key=len, reverse=True)[1:]
-    for sub in substrings(s):
+    for sub in substrs:
         if is_palindrome(sub):
             return sub
 
