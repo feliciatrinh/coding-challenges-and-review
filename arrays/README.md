@@ -78,3 +78,6 @@
 	* Given an array nums of n integers and an integer target, return the sum of three integers in nums that is closest
 	to target.
 	* Runtime: best case O(n^2) and worst case O(n^3)?
+* [Valid Sudoku](valid_sudoku.py)
+    * Given a 9x9 sudoku board containing digits 1-9 as strings and the character '.', determine whether board is valid
+    * Runtime: O(), Space complexity: O()

@@ -37,6 +37,9 @@
 * [Longest Palindromic Substring](longest_palindromic_substring.py)
     * Given string, return longest palindromic substring
     * Runtime: O(n^2) using dynamic programming or expansion method, O(n^3) for brute force solution
+* [Number of Palindromic Substrings](number_palindromic_substrings.py)
+    * Given string, return the number of palindromic substrings; Related problem: [Longest Palindromic Substring](longest_palindromic_substring.py)
+    * Runtime: O(n^2)
 * [Palindrome Permutation](palindrome_permutation.py)
 	* Returns true if the string is a permutation of a palindrome by noting the number of characters that appear in the
 	string an odd number of times.

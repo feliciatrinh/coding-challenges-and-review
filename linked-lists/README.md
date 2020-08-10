@@ -17,7 +17,6 @@
 * [Palindrome Linked List](palindrome_linked_list.py)
 	* Given a singly linked list, return True if linked list is a palindrome and False otherwise.
 	* Runtime: O(n)
-	* TODO: write a solution that uses O(1) additional space
 * [Partition](partition.py)
 	* Partition a linked list around a value x such that all nodes with values less than x come before all nodes with
 	values greater than or equal to x.

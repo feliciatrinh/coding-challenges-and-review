@@ -29,8 +29,12 @@
 * [Binary Search](binary_search.py)
 * [Count Occurrence](count_occurrence.py)
 	* Return the number of occurrences of an integer in a sorted array.
-	* Use binary search to find the first and last occurrence of n to take advantage of sortedness.
+	* Use binary search to find the first and last occurrence of n to take advantage of sortedness; see related problem [Find First and Last Position of Element in Sorted Array](first_last_position_sorted_array.py)
 	* Runtime: O(logn)
+* [Find First and Last Position of Element in Sorted Array](first_last_position_sorted_array.py)
+    * Given an array of integers sorted in ascending order, find the starting and ending position of a given target value.
+    * Uses binary search
+    * Runtime: O(logn)
 * [Kth Smallest](kth_smallest.py)
 	* Given two sorted arrays of integers, each of size n, give the kth smallest element in sorted concatenation the
 	two arrays.
