@@ -10,7 +10,7 @@ You may only move down or to the right.
 
 Example:
 Input:
-[[1, 2, 3], 
+[[1, 2, 3],
  [4, 5, 6],
  [7, 8, 9]]
 Output: 6
@@ -72,6 +72,9 @@ Grid for Space Complexity O(mn)
 
 
 def count_matrix_paths(m, n):
+    """
+    Runtime: O(m * n), Space Complexity: O(n)
+    """
     P = [0] * n
     P[0] = 1
 
@@ -85,6 +88,7 @@ def count_matrix_paths(m, n):
 def count_matrix_paths_recursive(m, n):
     """
     Recursive solution
+    Runtime: exponential
     """
     def count(row, col):
         if row == m - 1 or col == n - 1:
