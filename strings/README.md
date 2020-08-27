@@ -17,6 +17,10 @@
 * [Permutations](permutations.py)
     * Given string s with distinct characters, return list of all possible permutations of s.
     * Runtime: O(n * n!)
+* [Remove K Digits](remove_k_digits.py)
+    * Given a non-negative integer num represented as a string and integer k, return num with k digits removed such that
+    the new number is the smallest possible.
+    * Runtime: O(N), Space: O(N)?
 * [String to Integer](string_to_integer.py)
     * Given string s, return it as an integer if conversion is possible
     * TODO: review regex

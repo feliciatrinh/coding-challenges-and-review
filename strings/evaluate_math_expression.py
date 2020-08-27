@@ -1,10 +1,14 @@
 """
-Input: string containing a mathematical expression
+Input: string containing an infix mathematical expression
 Output: answer to the expression
 
 Runtime: O(n)
 
 Assume each expression is well-formed/valid.
+
+Infix: A + B, A + B * C
+Prefix: + A B, + A * B C
+Postfix: A B +, A B C * +
 
 Example
 Input: "3+2-1"
@@ -91,6 +95,7 @@ def eval_add_sub_regex(expression):
 
 def eval_all_ops_alt(expression):
     """
+    Infix Evaluation
     Solve expression containing +, -, *, / taking care of order of operations.
     Expression can be empty string. Spacings aren't standardized. Only have positive integers.
 

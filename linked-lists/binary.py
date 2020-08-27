@@ -4,9 +4,12 @@ Output: Unsigned decimal representation of the binary number represented by this
 
 Runtime: O(n)
 
-Example: 
+Example:
 Input: head -> 0 -> 1 -> 1 -> null
 Output: 3
+1 * 2^0 = 1
+1 * 2^1 = 2
+0 * 2^2 = 0
 
 Idea
 Add the value of each node into a list in reverse, iterate through the list at the end to calculate the decimal value
@@ -20,6 +23,9 @@ class Node:
 
 
 def binary(head):
+    """
+    Runtime: O(n), space complexity: O(n)
+    """
     values = []
     while head is not None:
         values.insert(0, head.val)

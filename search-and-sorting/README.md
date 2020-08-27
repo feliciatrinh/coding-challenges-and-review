@@ -55,3 +55,7 @@
 * [Quick Select](quickselect.py)
 	* Given an array s of integers and an integer k, return the kth smallest element of s.
 	* Average runtime: O(n), Worst-case runtime: O(n^2)
+* [Search Rotated Sorted Array](search_rotated_sorted_array.py)
+	* Given an array containing integers sorted in ascending order rotated about some pivot and an integer target,
+	return the index of the target if found and -1 otherwise.
+	* Runtime: O(logn) using binary search
