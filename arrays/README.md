@@ -8,13 +8,14 @@
     * Given an array of n integers, return a list of all unique triplets that sum to 0.
     * Uses logic from the [Two Sum problem](two_sum.py) and itertools.groupby()
     * Runtime: O(n^2)
-    * See the related problem [Three Sum Closest](three_sum_closest.py)
 * [Three Sum Closest](three_sum_closest.py)
     * Given an array nums of n integers and an integer target, return the sum of three integers in nums that is closest
     to target.
-    * Runtime: best case O(n^2) and worst case O(n^3)?
+    * Runtime: O(n^2), Space: O(n)?
 * [Three Sum Smaller](three_sum_smaller.py)
-    * 
+    * Given an array of n integers nums and a target, return the number of index triplets i, j, k with
+    0 <= i < j < k < n that satisfy nums[i] + nums[j] + nums[k] < target
+    * Runtime: O(N^2), Space: O(N)
 
 ## More Problems
 

@@ -18,7 +18,7 @@ Ideas
 
 - backtracking
     - find a subset of nums that sums to sum(nums) / k, keep track of the indices already used, decrement k
-    - find another subset that also sums to sum(nums) / that uses different indices from the first so you need to scan
+    - find another subset that also sums to sum(nums) / k that uses different indices from the first so you need to scan
       through nums again
         - if this element of nums didn't work out then mark it un-used so it can be considered for a different sub-array
 """
