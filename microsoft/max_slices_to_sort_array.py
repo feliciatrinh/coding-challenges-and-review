@@ -38,7 +38,7 @@ def max_slices(A):
     """
     Runtime: O(N), Space: O(N)
     """
-    # prev_max hold the maximum element of the previous slices
+    # prev_max holds the maximum element of the previous slices
     prev_max = []
     curr_max = A[0]
     slices = 1
@@ -46,13 +46,12 @@ def max_slices(A):
         if num > curr_max:  # if elements weren't distinct, this would be >= instead
             slices += 1
             prev_max.append(curr_max)
-            curr_max = num
         else:
             # current slice should be merged with previous slices
             while prev_max and num < prev_max[-1]:
                 slices -= 1
                 prev_max.pop()
-            curr_max = max(curr_max, num)
+        curr_max = max(curr_max, num)
     return slices
 
 
@@ -69,7 +68,6 @@ def max_slices_print(A):
         if num > curr_max:
             slices += 1
             prev_max.append(curr_max)
-            curr_max = num
             s.append([num])
         else:
             # current slice should be merged with previous slices
@@ -78,7 +76,7 @@ def max_slices_print(A):
                 prev_max.pop()
                 s[slices - 1] += s.pop()
             s[-1].append(num)
-            curr_max = max(curr_max, num)
+        curr_max = max(curr_max, num)
     print(s)
     return slices
 

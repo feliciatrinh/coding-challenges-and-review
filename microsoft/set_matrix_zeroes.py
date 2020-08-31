@@ -120,11 +120,14 @@ def set_matrix_zeroes(matrix):
                 cols.add(j)
 
     for i in range(num_rows):
-        if i in rows:
-            matrix[i] = [0] * num_cols
-            continue
+        # if i in rows:
+        #     matrix[i] = [0] * num_cols
+        #     continue
+        # for j in range(num_cols):
+        #     if j in cols:
+        #         matrix[i][j] = 0
         for j in range(num_cols):
-            if j in cols:
+            if i in rows or j in cols:
                 matrix[i][j] = 0
     print(matrix)
 

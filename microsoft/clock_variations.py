@@ -62,7 +62,66 @@ def valid_times(A, B, C, D):
     return count
 
 
-assert valid_times(1, 0, 0, 2) == 12
-assert valid_times(2, 1, 2, 1) == 6
-assert valid_times(1, 4, 8, 2) == 5
-assert valid_times(4, 4, 4, 4) == 0
+def valid_times_alt(A, B, C, D):
+    """
+    Runtime: O(n!), Space complexity: O(n!) where n always equals 4 here
+    """
+    def get_permutation(str_list, start, end, perms):
+        if start == end:
+            hour = ''.join(str_list[:2])
+            minutes = ''.join(str_list[2:])
+            if ("00" <= hour < "24" and "00" <= minutes <= "59") or (hour == "24" and minutes == "00"):
+                perms.add(hour + minutes)
+        else:
+            for i in range(start, end):
+                # swap start and i-th element
+                str_list[start], str_list[i] = str_list[i], str_list[start]
+                # reduce size of substring to get to sub-problems
+                get_permutation(str_list, start + 1, end, perms)
+                # backtrack
+                str_list[start], str_list[i] = str_list[i], str_list[start]
+        return perms
+
+    strings = [str(A), str(B), str(C), str(D)]
+    permutations = get_permutation(strings, 0, len(strings), set())
+    return len(permutations)
+
+
+def valid_times_alt_alt(A, B, C, D):
+    """
+    Runtime: O(n!), Space complexity: O(n!) where n always equals 4 here
+    """
+    def get_permutation(str_list, start, end, perms):
+        count = 0
+        if start == end:
+            time = ''.join(str_list)
+            if time not in perms:
+                hour = time[:2]
+                minutes = time[2:]
+                if ("00" <= hour < "24" and "00" <= minutes <= "59") or (hour == "24" and minutes == "00"):
+                    perms.add(time)
+                    count += 1
+        else:
+            for i in range(start, end):
+                # swap start and i-th element
+                str_list[start], str_list[i] = str_list[i], str_list[start]
+                # reduce size of substring to get to sub-problems
+                count += get_permutation(str_list, start + 1, end, perms)
+                # backtrack, swap back to the previous configuration so that you can try other configurations from there
+                str_list[start], str_list[i] = str_list[i], str_list[start]
+        return count
+
+    strings = [str(A), str(B), str(C), str(D)]
+    return get_permutation(strings, 0, len(strings), set())
+
+
+def test(function):
+    assert function(1, 0, 0, 2) == 12
+    assert function(2, 1, 2, 1) == 6
+    assert function(1, 4, 8, 2) == 5
+    assert function(4, 4, 4, 4) == 0
+
+
+functions = [valid_times, valid_times_alt, valid_times_alt_alt]
+for func in functions:
+    test(func)

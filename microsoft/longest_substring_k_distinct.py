@@ -24,7 +24,7 @@ Better Idea:
   1 index after the last index of the first unique character in this substring
     - i'd need to keep track of the first unique character in each substring somehow or query for it every time we reach
       k unique characters -> would make the runtime O(nk)?
-    - remove this character from the dictionary so that the dictionary always has at most 5 keys
+    - remove this character from the dictionary so that the dictionary always has at most k keys
 
 - is there a way to keep track of the first unique character of each substring without calculating the min index each
   time to reduce runtime to O(n)

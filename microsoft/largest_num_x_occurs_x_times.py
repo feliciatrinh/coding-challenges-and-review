@@ -44,6 +44,23 @@ def largest_x_num(A):
     return max_num
 
 
+def largest_x_num_alt(A):
+    freq = dict()
+    for a in A:
+        if a in freq:
+            freq[a] += 1
+        else:
+            freq[a] = 1
+        if freq[a] > 10**5:
+            return 0
+
+    max_num = 0
+    for num, count in freq.items():
+        if num == count:
+            max_num = max(max_num, num)
+    return max_num
+
+
 assert largest_x_num([3, 8, 2, 3, 3, 2]) == 3
 assert largest_x_num([7, 1, 2, 8, 2]) == 2
 assert largest_x_num([3, 1, 4, 1, 5]) == 0

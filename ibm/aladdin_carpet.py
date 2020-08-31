@@ -57,11 +57,31 @@ def aladdin_carpet(magic, distance):
     return start
 
 
+def aladdin_carpet_alt(magic, distance):
+    """
+    Runtime: O(N), Space: O(1)
+    """
+    # sum of magic[i] - distance[i] for all i
+    if sum(magic) - sum(distance) < 0:
+        return -1
+
+    start = 0
+    remainder = 0
+    for i in range(len(magic)):
+        # Aladdin can't make it to the next stop
+        remainder += magic[i] - distance[i]
+        if remainder < 0:
+            remainder = 0
+            start = i + 1
+    return start
+
+
 def aladdin_carpet_bad(magic, distance):
     """
     First attempt
     """
     start = 0
+    num_places = len(magic)
     while visited < num_places and start < num_places:
         # magic that Aladdin has after arriving at each place
         m = magic[:]
@@ -84,3 +104,6 @@ def aladdin_carpet_bad(magic, distance):
 
 assert aladdin_carpet([3, 2, 5, 4], [2, 3, 4, 2]) == 0
 assert aladdin_carpet([2, 4, 5, 2], [4, 3, 1, 3]) == 1
+
+assert aladdin_carpet_alt([3, 2, 5, 4], [2, 3, 4, 2]) == 0
+assert aladdin_carpet_alt([2, 4, 5, 2], [4, 3, 1, 3]) == 1

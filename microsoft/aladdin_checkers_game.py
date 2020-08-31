@@ -99,7 +99,7 @@ def checkers_game_dp(B):
     Dynamic Programming solution
     Runtime: O(n^2), Space complexity: O(n^2)
     """
-    def get_count(player, direction, grid, counts):
+    def get_count(player, direction):
         """
         :param player: jafar's final position
         :param direction: -1 indicates coming from the left, 1 indicates coming from the right
@@ -111,7 +111,7 @@ def checkers_game_dp(B):
         if 0 <= prev_i <= n - 1 and 0 <= prev_j <= n - 1:
             if board[i + 1][j + direction] == "X" and board[prev_i][prev_j] == "O":
                 board[i][j] = "O"
-                return counts[prev_i][prev_j] + 1
+                return P[prev_i][prev_j] + 1
         return 0
 
     # convert B into a list of lists where each element is a list representing that row of the checker board
@@ -127,7 +127,7 @@ def checkers_game_dp(B):
     for i in range(n - 3, -1, -1):
         for j in range(n):
             if board[i][j] == ".":
-                P[i][j] = max(get_count((i, j), -1, board, P), get_count((i, j), 1, board, P))
+                P[i][j] = max(get_count((i, j), -1), get_count((i, j), 1))
                 max_count = max(max_count, P[i][j])
     return max_count
 

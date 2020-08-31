@@ -4,7 +4,7 @@ Similar to Leetcode 413. Arithmetic Slices
 Input: array of N positions of a particle
 Output: number of periods of time when the movement of the particle was stable
 
-Movement of a particle is stable when the velocity remain the same.
+Movement of a particle is stable when the velocity remains the same.
 You need at least 3 measurements to be sure that a particle didn't change its velocity.
 
 Example

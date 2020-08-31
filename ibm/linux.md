@@ -325,3 +325,18 @@ UUID=ec060539-3599-4287-b624-8b6f6cf69c00 /               ext4    errors=remount
 UUID=E808-DD66  /boot/efi       vfat    umask=0077      0       1
 /swapfile
 ```
+
+## How to access another user's files on Linux?
+
+```
+su
+<rootpassword>
+cd /home/username
+ls
+```
+
+`su` switches you to the root user account and requires the root account's password.  
+`sudo` runs a single command with root privileges; it does not switch to the root use or require a separate root user
+password.
+
+Linux goes `sudo` only by default.

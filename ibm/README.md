@@ -24,7 +24,7 @@
 * [Shopper's Delight](shoppers_delight.py)
     * Given 4 arrays, each containing the price per unit for that particular item, and a budget; return the number of
     ways the shopper can purchase all 4 items.
-    * Runtime: O(N^3), Space: O(N) where N is the average length of the 4 arrays
+    * Runtime: O(N^3), Space: O(N)? where N is the average length of the 4 arrays
 * [Triplets](triplets.py)
     * Given array of n distinct integers d and integer threshold t, return number of (a, b, c) index triplets that
     satisfy d[a] < d[b] < d[c] and d[a] + d[b] + d[c] <= t
@@ -41,6 +41,10 @@
     * Given a string skills, return the total number of different teams satisfying the following: a team consists of 5
     students, each student is skilled in different subject, and a student may be on one team.
     * Runtime: O(N), Space: O(N)
+* [Shifting Strings](shifting_strings.py)
+    * Given string s, number of times to shift left, and number of times to shift right; return the string after
+    performing the shifts.
+    * Runtime: O(N), Space: O(1)
 * [Two Strings](two_strings.py)
     * Given two arrays each containing N strings, for each index print whether the corresponding elements contain a
     common substring.

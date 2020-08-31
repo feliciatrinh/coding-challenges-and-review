@@ -45,17 +45,43 @@ def crop_words(message, k):
     return ''
 
 
-assert crop_words("Codility We test coders", 14) == "Codility We"
-assert crop_words("Codility", 5) == ''
-assert crop_words("Codility", 8) == "Codility"
-assert crop_words("Codility ", 8) == "Codility"
-assert crop_words("Codility ", 10) == "Codility"
-assert crop_words("", 1) == ''
-assert crop_words(" d ", 3) == ' d'
-assert crop_words("   re", 2) == ''
-assert crop_words(" co de my", 5) == ' co'
-assert crop_words(" co de my", 7) == ' co de'
-assert crop_words("  ", 2) == ''
-assert crop_words(" c d  ", 5) == ' c d'
-assert crop_words("      Codility We test coders     ", 10) == ""
-assert crop_words("      Codility We test coders     ", 14) == "      Codility"
+def crop_words_alt(message, k):
+    """
+    rstrip() removes trailing whitespace
+    Runtime: O(n), Space: O(1)
+    """
+    if not message or k <= 0:
+        return ''
+
+    if 0 < len(message) <= k:
+        return message.rstrip()
+
+    # last char you would need to remove to achieve length k
+    last = message[k]
+    # while we are in the middle of a word
+    while last != ' ' and k > 0:
+        k -= 1
+        last = message[k]
+    return message[:k].rstrip()
+
+
+def test(function):
+    assert function("Codility We test coders", 14) == "Codility We"
+    assert function("Codility", 5) == ''
+    assert function("Codility", 8) == "Codility"
+    assert function("Codility ", 8) == "Codility"
+    assert function("Codility ", 10) == "Codility"
+    assert function("", 1) == ''
+    assert function(" d ", 3) == ' d'
+    assert function("   re", 2) == ''
+    assert function(" co de my", 5) == ' co'
+    assert function(" co de my", 7) == ' co de'
+    assert function("  ", 2) == ''
+    assert function(" c d  ", 5) == ' c d'
+    assert function("      Codility We test coders     ", 10) == ""
+    assert function("      Codility We test coders     ", 14) == "      Codility"
+
+
+functions = [crop_words_alt]
+for func in functions:
+    test(func)

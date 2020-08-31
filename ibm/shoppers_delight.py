@@ -56,7 +56,7 @@ def shoppers_delight(jeans, shoes, skirts, tops, budget):
 
 def shoppers_delight_alt(jeans, shoes, skirts, tops, budget):
     """
-    Runtime: O(N^3) where N is the average length of the clothing arrays, Space: O(N)?
+    Runtime: O(N^3) where N is the average length of the clothing arrays, Space: O(N)? Space should be larger?
     """
     if min(jeans) + min(shoes) + min(skirts) + min(tops) > budget:
         return 0

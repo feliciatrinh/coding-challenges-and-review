@@ -6,6 +6,10 @@
 	* Returns true if a string consisting of '{', '}', '[', ']' is balanced. "{[{}]}" is balanced.
 	* Uses a stack. Runtime: O(n)
     * See [Valid Parenthese](valid_parentheses.py) for a similar problem in Python.
+* [Client Messages](client_messages.py)
+    * Given a list of Message objects containing a type and an owner, return one possible assignment of client-IDs to
+    B-type messages which will make the sequence valid.
+    * Runtime: O(N), Space: O(N)
 * [Min Stack](min_stack.py)
 	* Implement a stack class that enables requests for the minimum value in the stack.
 	* Uses a doubly linked list.

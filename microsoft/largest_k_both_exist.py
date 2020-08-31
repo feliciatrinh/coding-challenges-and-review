@@ -8,6 +8,11 @@ Output: 3
 
 Input: [1, 2, 3, -4]
 0
+
+Ideas
+- if we have seen our current element's opposite, then update the max_k
+- otherwise, if our current element can possibly beat the current max_k, then add it to our seen set
+    - if it can't beat our current max_k, then there's no point in adding it to our set
 """
 
 

@@ -37,3 +37,7 @@ def quickselect(s, k):
         return v
     else:
         return quickselect(s_r, k - len(s_l) - len(s_v))
+
+
+assert quickselect([9, 7, 5, 3, 1], 2) == 3
+assert quickselect([9, 4, 7, 2, 6, 3, 5, 3, 2, 1, 1, 9, 0, 3], 10) == 5

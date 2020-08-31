@@ -46,6 +46,9 @@ We always start from 0, so if 0 doesn't work as a starting point, then 1, 2, or 
 
 
 def gas_station(gas, cost):
+    """
+    Runtime: O(N), Space: O(1)
+    """
     start = 0
     remainder = 0
     final = 0
@@ -61,5 +64,25 @@ def gas_station(gas, cost):
     return start
 
 
+def gas_station_alt(gas, cost):
+    """
+    Runtime: O(N), Space: O(1)
+    """
+    if sum(gas) - sum(cost) < 0:
+        return -1
+
+    start = 0
+    remainder = 0
+    for i in range(len(gas)):
+        remainder += gas[i] - cost[i]
+        if remainder < 0:
+            remainder = 0
+            start = i + 1
+    return start
+
+
 assert gas_station([1, 2, 3, 4, 5], [3, 4, 5, 1, 2]) == 3
 assert gas_station([2, 3, 4], [3, 4, 3]) == -1
+
+assert gas_station_alt([1, 2, 3, 4, 5], [3, 4, 5, 1, 2]) == 3
+assert gas_station_alt([2, 3, 4], [3, 4, 3]) == -1

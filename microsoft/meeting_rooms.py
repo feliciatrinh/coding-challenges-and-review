@@ -24,9 +24,7 @@ def meeting_rooms(intervals):
     rooms = 0
     for interval in intervals:
         start, end = interval
-        if not ends_heap:
-            rooms += 1
-        elif start >= ends_heap[0]:
+        if ends_heap and start >= ends_heap[0]:
             heapq.heappop(ends_heap)
         else:
             rooms += 1
@@ -36,7 +34,7 @@ def meeting_rooms(intervals):
 
 def meeting_rooms_alt(intervals):
     """
-    Simply return the length of the heap at the end.
+    Simply return the length of the heap at the end. The heap contains meetings currently taking up a room.
     Runtime: O(NlogN), Space: O(N)
     """
     import heapq
@@ -45,6 +43,7 @@ def meeting_rooms_alt(intervals):
     ends_heap = []
     for interval in intervals:
         start, end = interval
+        # the meeting at the top of the heap ends before this meeting, so we can reuse the room
         if ends_heap and ends_heap[0] <= start:
             heapq.heappop(ends_heap)
         heapq.heappush(ends_heap, end)

@@ -23,10 +23,6 @@
     * Given an array of N distinct integers, return the max number of slices for which the sorting algorithm will return
     a correctly sorted array.
     * Runtime: O(N), Space complexity: O(N)
-* [Meeting Rooms](meeting_rooms.py)
-    * Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...], find the minimum
-    number of conference rooms required.
-    * Runtime: O(NlogN), Space: O(N)
 * [Number of Fractions that Sum to 1](num_fractions_add_to_one.py)
     * Given fractions, return the number of pairs that sum to one
     * Uses [two_sum](../arrays/two_sum.py) aka [sum_to_k](../arrays/sum_to_k.py) approach
@@ -66,6 +62,10 @@
 
 ### Heaps
 
+* [Meeting Rooms](meeting_rooms.py)
+    * Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...], find the minimum
+    number of conference rooms required.
+    * Runtime: O(NlogN), Space: O(N)
 * [Median of Data Stream](median_data_stream.py)
     * Design a data structure that supports adding a num from the data stream to the data structure and returning the
     median of all elements seen so far
