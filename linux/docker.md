@@ -109,15 +109,17 @@ exit 0
 My answer
 ```
 #!/usr/bin/env bash
-docker run -di --name my-container busybox
-docker exec -i my-container /bin/sh -c "echo $MY_ENVIRONMENT_VARIABLE"
+docker run -di -e MY_ENVIRONMENT_VARIABLE --name my-container busybox
 
 exit 0
 ```
+You can view the value of the environment variable in your docker container by
+`docker exec -i my-container /bin/sh -c "echo $MY_ENVIRONMENT_VARIABLE"`
 
-- the `--name` flag assigns a name to the new container
 - the `-i` flag creates an interactive `bash` shell in the container
 - the `-d` flag runs the container in the background and prints container ID
+- the `--name` flag assigns a name to the new container
+- the `-e` flag is used to set environment variables
 - `docker exec` is used to run a command in a running container
 
 ## My Notes

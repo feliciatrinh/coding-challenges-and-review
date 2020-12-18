@@ -31,6 +31,16 @@
     * Runtime: O(N^2), Space: O(N)
     * See [Three Sum Smaller](../arrays/three_sum_smaller.py)
 
+### Regex
+
+* [Regex Sheet](regex.md)
+* [Detecting Valid Latitude and Longitude Pairs](detecting_valid_latitude_longitude_pairs.py)
+    * Given a list of strings that may represent latitude/longitude pairs, print "Valid" or "Invalid" for each test.
+    * Runtime: O(N * M), Space: O(1) where N is the number of pairs in coordinates and M is average length of each
+* [Valid Email Address](valid_email_addresses.py)
+    * Given an email address, return True if valid and False otherwise.
+    * Runtime: O(N), Space: O(1)
+
 ### Strings
 
 * [Passage Filter](passage_filter.py)
@@ -64,3 +74,12 @@
     * Given integer budget n, unit cost of container, and integer number of empty containers to return for a free
     container m; return maximum number of empty containers a customer can receive.
     * Runtime: O(logN), Space: O(1)
+    
+### Linux
+
+* [Basic Linux Interview Questions](../linux/linux-interview-questions.md)
+* [Linux Commands in DevOps](../linux/linux-basics.md)
+* [Docker: Environment Variables Task](../linux/docker.md)
+    * Complete a file stub `script.sh` with one or more steps that does the following: runs a new Docker container
+    'my-container' from the 'busybox' image (latest tag) in interactive background mode, with pseudo-TTY allocation; and
+    passes an existing environment variable "MY_ENVIRONMENT_VARIABLE" to the "my-container" container.

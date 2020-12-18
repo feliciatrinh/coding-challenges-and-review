@@ -99,10 +99,44 @@ def longest_substring_k_distinct_alt(s: str, k: int) -> str:
     return longest_substring
 
 
-assert longest_substring_k_distinct("abcbbbbcccbdddadacb", 2) == "bcbbbbcccb"
-assert longest_substring_k_distinct("abcddefabc", 4) == "abcdd"
-assert longest_substring_k_distinct("", 4) == ""
+def longest_substring_k_distinct_alt_alt(s: str, k: int) -> str:
+    """
+    Runtime: O(nk), Space complexity: O(k)
+    """
+    if k <= 0:
+        return ""
 
-assert longest_substring_k_distinct_alt("abcbbbbcccbdddadacb", 2) == "bcbbbbcccb"
-assert longest_substring_k_distinct_alt("abcddefabc", 4) == "abcdd"
-assert longest_substring_k_distinct_alt("", 4) == ""
+    longest_substring = ""
+    max_len = 0
+    start = 0
+    char_to_index = {}
+    for j, char in enumerate(s):
+        char_to_index[char] = j
+
+        if len(char_to_index) > k:
+            # remove the 1st unique character seen in this current substring from the dictionary
+            min_index = len(s)
+            min_char = 'a'
+            for seen_char, seen_index in char_to_index.items():
+                if seen_index < min_index:
+                    min_index = seen_index
+                    min_char = seen_char
+            char_to_index.pop(min_char)
+            # move the start index to the right of the letter whose last appearance comes first
+            start = min_index + 1
+        else:
+            if j - start + 1 > max_len:
+                longest_substring = s[start: j + 1]
+                max_len = j - start + 1
+    return longest_substring
+
+
+def test(function):
+    assert function("abcbbbbcccbdddadacb", 2) == "bcbbbbcccb"
+    assert function("abcddefabc", 4) == "abcdd"
+    assert function("", 4) == ""
+
+
+functions = [longest_substring_k_distinct, longest_substring_k_distinct_alt, longest_substring_k_distinct_alt_alt]
+for func in functions:
+    test(func)
