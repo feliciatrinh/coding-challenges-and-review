@@ -16,6 +16,12 @@
     * Given array A containing the order in which the A[k-th] (k in range [0, n - 1]) bulb is turned on for bulbs
     numbered 1 to N, return the number of moments for which all turned on bulbs are blue.
     * Runtime: O(N), Space: O(1)
+* [Longest Bi-valued Sequence](longest_bi_valued_sequence.py)
+    * Given an array of integers, return the length of the longest bi-valued sequence (sequence with at most two
+    distinct elements).
+    * Sliding window
+    * Runtime: O(N), Space: O(N)
+    * See related [Longest Substring K Distinct](longest_substring_k_distinct.py)
 * [Max Row Column Sum](max_row_col_sum.py)
     * Given a matrix, return the sum of the maximum row sum and the maximum column sum.
     * Runtime: O(M * N), Space: O(1)
@@ -23,6 +29,10 @@
     * Given an array of N distinct integers, return the max number of slices for which the sorting algorithm will return
     a correctly sorted array.
     * Runtime: O(N), Space complexity: O(N)
+* [Max Sum From More Than One Pair](max_sum_from_more_than_one_pair.py)
+    * Given an unordered array of positive integers (possibly with duplicates), return the maximum sum that can be
+    generated with more than one pair of array elements, otherwise -1.
+    * Runtime: O(N^2), Space: O(N)
 * [Number of Fractions that Sum to 1](num_fractions_add_to_one.py)
     * Given fractions, return the number of pairs that sum to one
     * Uses [two_sum](../arrays/two_sum.py) aka [sum_to_k](../arrays/sum_to_k.py) approach
